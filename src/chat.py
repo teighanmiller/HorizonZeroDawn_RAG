@@ -97,6 +97,7 @@ class Chat:
         - location: this category contains information about specific locations and cities in the game.
         - object: this category contains information about in game objects.
         - character: this category contains information about specific characters.
+        - other: this category contains information that does not fit into the other categories.
         """
 
         reword_prompt = f"""
@@ -111,6 +112,7 @@ class Chat:
         - location
         - object
         - character
+        - other
         
         The returned text should be in the dictionary format:
         {{"classification": "<insert classification>", "query": "<insert query>"}}
