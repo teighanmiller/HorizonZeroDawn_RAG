@@ -4,18 +4,34 @@ Scrapes Horizon Zero Dawn Fan Wiki pages for data.
 
 import csv
 import time
+import logging
+from random import random
 from typing import Tuple
 from datetime import datetime
+from urllib.parse import urljoin
 import requests
 from tqdm import tqdm
 from bs4 import BeautifulSoup, PageElement, Tag, NavigableString
 
 BASE_URL = "https://horizon.fandom.com"
 TARGET_URL = f"{BASE_URL}/wiki/Special:AllPages"
-HEADERS = {"User-Agent": "Mozilla/5.0"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/118.0.0.0 Safari/537.36",
+    "Referer": "https://horizon.fandom.com/wiki/Special:AllPages",
+}
+
+logging.basicConfig(
+    filename="logs/scraper_log.log",
+    encoding="utf-8",
+    filemode="a",
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M",
+)
 
 
-def get_content(soup: BeautifulSoup) -> str:
+def get_content(soup: BeautifulSoup) -> list:
     """
     Gets the content of the webpage
 
@@ -40,9 +56,9 @@ def get_content(soup: BeautifulSoup) -> str:
 
     # Returns the string without the content before "[ Infobox source ]"
     if idx != -1:
-        return content[idx + len(infobox) :].strip()
+        return [content[idx + len(infobox) :].strip()]
 
-    return content.strip()
+    return [content.strip()]
 
 
 def get_location(soup: BeautifulSoup) -> str:
@@ -104,18 +120,27 @@ def get_html(
     url: str,
 ) -> Tuple[BeautifulSoup, PageElement | Tag | NavigableString | None]:
     """
-    Gets the content of a webpage.
-
-    Args:
-        url (str): the url pointing to the webpage to be scraped.
-
-    Returns:
-        BeautifulSoup, PageElement | Tag | Navigable String | None:
-        Gets the BeautifulSoup object that contains the webpage and the link to the next page.
+    Fetch a Special:AllPages page and return its soup and the 'Next page' <a> tag if present.
+    Robust to nested markup inside the anchor.
     """
-    page = requests.get(url, headers=HEADERS, timeout=30)
-    soup = BeautifulSoup(page.text, "html.parser")
-    follow = soup.find("a", string=lambda text: text and text.startswith("Next page"))
+    html = safe_get(url)
+    if not html or html == "None":
+        logging.error("Failed to fetch index page: %s", url)
+        return BeautifulSoup("", "html.parser"), None
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Prefer anchors that are clearly part of AllPages nav; fall back to any with the title.
+    candidates = soup.select(
+        '.mw-allpages-nav a[title="Special:AllPages"]'
+    ) or soup.select('a[title="Special:AllPages"]')
+
+    follow = None
+    for a in candidates:
+        if a.get_text(strip=True).startswith("Next page"):
+            follow = a
+            break
+
     return soup, follow
 
 
@@ -133,17 +158,65 @@ def get_pages(writer: csv.writer, soup: BeautifulSoup):
         page_url = f"{BASE_URL}{relative_link}"
         page = requests.get(page_url, headers=HEADERS, timeout=30)
         new_soup = BeautifulSoup(page.text, "html.parser")
+        category = get_category(new_soup)
+        location = get_location(new_soup)
+        content = get_content(new_soup)
 
-        writer.writerow(
-            {
-                "url": page_url,
-                "category": get_category(new_soup),
-                "location": get_location(new_soup),
-                "content": get_content(new_soup),
-                # **get_infobox_data(new_soup),
-            }
-        )
-        time.sleep(0.5)
+        if len(content[0].split()) > 500:
+            content = batch(content[0])
+        else:
+            logging.debug("No content was extracted from this page: %s", page_url)
+
+        for item in content:
+            writer.writerow(
+                {
+                    "url": page_url,
+                    "category": category,
+                    "location": location,
+                    "content": item,
+                }
+            )
+        time.sleep(1.5 + random())
+
+
+def batch(content: str) -> list:
+    """
+    Split long strings by paragraphs.
+
+    Args:
+        content (str): a string containing more than 500 words
+
+    Returns:
+        list: the string split into paragraphs
+    """
+    paragraphs = [p.strip() for p in content.split("\n") if p.strip()]
+    return paragraphs
+
+
+def safe_get(url: str, retries: int = 3, backoff: float = 2.0) -> str:
+    """
+    Makes a GET request with retries and error handling.
+
+    Args:
+        url (str): The URL to fetch.
+        retries (int): Number of retries before giving up.
+        backoff (float): Delay between retries (seconds).
+
+    Returns:
+        str | None: Response text if successful, otherwise None.
+    """
+    for attempt in range(1, retries + 1):
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=30)
+            response.raise_for_status()  # Raises HTTPError for bad responses
+            return response.text
+        except requests.exceptions.RequestException as e:
+            logging.error("Attempt %s/%s failed for %s: %s", attempt, retries, url, e)
+            if attempt < retries:
+                time.sleep(backoff * attempt)  # Exponential backoff
+            else:
+                logging.error("Giving up on %s", url)
+                return "None"
 
 
 def scrape_data():
@@ -152,9 +225,9 @@ def scrape_data():
     """
     # Get the current datetime object
     current_datetime = datetime.now()
-    date_time_string = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+    date_time_string = current_datetime.strftime("%Y-%m-%d_%H-%M-%S")
 
-    csv_path = f"/Users/teighanmiller/development/courses/zoomcamp/HorizonZeroDawn_RAG/data/horizon_data_{date_time_string}.csv"
+    csv_path = f"data/horizon_data_{date_time_string}.csv"
 
     # Format the datetime object into a string
     main_soup, next_page = get_html(TARGET_URL)
@@ -167,16 +240,17 @@ def scrape_data():
         encoding="utf-8",
     ) as csv_file:
         field_names = ["url", "category", "location", "content"]
-        writer = csv.DictWriter(f=csv_file, fieldnames=field_names)
+        writer = csv.DictWriter(csv_file, fieldnames=field_names)
         writer.writeheader()
 
         while True:
+            print(next_page)
             get_pages(writer=writer, soup=main_soup)
             if not next_page:
                 break
-            next_url = f"{BASE_URL}/{next_page.get('href')}"
+            next_url = urljoin(BASE_URL, next_page.get("href", ""))
+            logging.debug("Following next index page: %s", next_url)
             main_soup, next_page = get_html(next_url)
-
     print("Finished data ingestion.")
 
 
