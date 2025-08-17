@@ -7,9 +7,10 @@ user queries, and retrieving responses from the LLM.
 """
 
 import os
+from typing import Tuple, List
+import tiktoken
 from openai import AzureOpenAI
 from dotenv import load_dotenv
-from typing import Tuple, List
 
 
 class Chat:
@@ -23,6 +24,7 @@ class Chat:
         Initialize the Chat instance by loading environment variables,
         setting up the Azure OpenAI client, and initializing state variables.
         """
+        TOKEN_LIMIT = 500
         self.history: list[str] = []
         self.tokens_used: int = 0
 
@@ -32,6 +34,17 @@ class Chat:
             azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT_URI"),
             api_version=os.getenv("AZURE_API_VERSION"),
         )
+
+    def _get_history(self):
+        encoding = tiktoken.get_encoding("o200k_base")
+        used_tokens = 0
+        usable_history = []
+        for msg in self.history:
+            if len(encoding.encode(msg)) + used_tokens < 500:
+                usable_history.append(msg)
+            else:
+                break
+        return usable_history
 
     def get_rag_prompt(self, llm_query: str, documents: List[str]) -> Tuple[str, str]:
         """
@@ -74,7 +87,7 @@ class Chat:
                 - system_prompt: Instructions for rewriting queries into a clearer format.
                 - reword_prompt: Reformulated user prompt with history for context.
         """
-        # TODO Should limit the chat history based on tokens
+        context_history = self._get_history()
         system_prompt = """
         You are an editor. You will be given a query, and a history of a chat with a RAG chatbot. Using this history and the query rewrite the query into a more understandable format.
         When rewriting the query remember that it is for a RAG system. You should highlight important information in the query and make it more understandable based on the history.
@@ -84,7 +97,7 @@ class Chat:
         Here is the query: {user_query}
 
         Here is the chat history, every second paragraph is a response from the RAG app. The others are all user queries.:
-        {"\n\n-".join(self.history)}
+        {"\n\n-".join(context_history)}
 
         Only return the rewritten query.
         """
