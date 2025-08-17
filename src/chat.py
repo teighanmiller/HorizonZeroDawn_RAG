@@ -7,6 +7,7 @@ user queries, and retrieving responses from the LLM.
 """
 
 import os
+import json
 from typing import Tuple, List
 import tiktoken
 from openai import AzureOpenAI
@@ -19,12 +20,13 @@ class Chat:
     It manages chat history, constructs prompts for RAG, and retrieves responses.
     """
 
+    TOKEN_LIMIT = 500
+
     def __init__(self):
         """
         Initialize the Chat instance by loading environment variables,
         setting up the Azure OpenAI client, and initializing state variables.
         """
-        TOKEN_LIMIT = 500
         self.history: list[str] = []
         self.tokens_used: int = 0
 
@@ -40,7 +42,7 @@ class Chat:
         used_tokens = 0
         usable_history = []
         for msg in self.history:
-            if len(encoding.encode(msg)) + used_tokens < 500:
+            if len(encoding.encode(msg)) + used_tokens < self.TOKEN_LIMIT:
                 usable_history.append(msg)
             else:
                 break
@@ -77,9 +79,7 @@ class Chat:
 
     def get_reword_prompt(self, user_query: str) -> Tuple[str, str]:
         """
-        Create a system and user prompt to rewrite a query for better retrieval.
-
-        Args:
+        Create a system and user prompt to rewrite a query for better retrieval        Args:
             user_query (str): The raw user input query.
 
         Returns:
@@ -91,6 +91,12 @@ class Chat:
         system_prompt = """
         You are an editor. You will be given a query, and a history of a chat with a RAG chatbot. Using this history and the query rewrite the query into a more understandable format.
         When rewriting the query remember that it is for a RAG system. You should highlight important information in the query and make it more understandable based on the history.
+        Also classify the question into one of the following categories to pull data from:
+        - machine: this category contains information about machines in Horizon.
+        - society: this category contains information about the cultures and peoples in Horizon.
+        - location: this category contains information about specific locations and cities in the game.
+        - object: this category contains information about in game objects.
+        - character: this category contains information about specific characters.
         """
 
         reword_prompt = f"""
@@ -99,7 +105,15 @@ class Chat:
         Here is the chat history, every second paragraph is a response from the RAG app. The others are all user queries.:
         {"\n\n-".join(context_history)}
 
-        Only return the rewritten query.
+        Return the rewritten query and the classification of the query. The classification should be in one of the following:
+        - machine
+        - society
+        - location
+        - object
+        - character
+        
+        The returned text should be in the dictionary format:
+        {{"classification": "<insert classification>", "query": "<insert query>"}}
         """
         return system_prompt.strip(), reword_prompt.strip()
 
@@ -129,4 +143,5 @@ if __name__ == "__main__":
     TEST_QUERY = "Who is Aloy?"
     sys_prompt, user_prompt = chat.get_reword_prompt(TEST_QUERY)
     new_query = chat.get_llm_response(sys_prompt, user_prompt)
-    print(new_query)
+    q = json.loads(new_query)
+    print(q)
