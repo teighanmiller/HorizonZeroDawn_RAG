@@ -31,6 +31,23 @@ logging.basicConfig(
 )
 
 
+def classify_page(title: str, text: str) -> str:
+    text_lower = text.lower()
+    title_lower = title.lower()
+
+    if "machine" in text_lower or "weaknesses" in text_lower:
+        return "machine"
+    if "tribe" in text_lower or "culture" in text_lower or "society" in text_lower:
+        return "society"
+    if "location" in text_lower or "region" in text_lower or "map" in text_lower:
+        return "geological location"
+    if "artifact" in text_lower or "weapon" in text_lower or "item" in text_lower:
+        return "object"
+    if "voice actor" in text_lower or "character" in title_lower:
+        return "character"
+    return "other"
+
+
 def get_content(soup: BeautifulSoup) -> list:
     """
     Gets the content of the webpage
@@ -161,21 +178,18 @@ def get_pages(writer: csv.writer, soup: BeautifulSoup):
         category = get_category(new_soup)
         location = get_location(new_soup)
         content = get_content(new_soup)
+        classification = classify_page(page_url, content[0])
+
+        if not content:
+            logging.debug("No content was extracted from this page: %s", page_url)
+            content = [""]
 
         if len(content[0].split()) > 500:
             content = batch(content[0])
-        else:
-            logging.debug("No content was extracted from this page: %s", page_url)
 
         for item in content:
-            writer.writerow(
-                {
-                    "url": page_url,
-                    "category": category,
-                    "location": location,
-                    "content": item,
-                }
-            )
+            new_content = [page_url, classification, category, location, item]
+            writer.writerow(new_content)
         time.sleep(1.5 + random())
 
 
@@ -239,9 +253,9 @@ def scrape_data():
         newline="",
         encoding="utf-8",
     ) as csv_file:
-        field_names = ["url", "category", "location", "content"]
-        writer = csv.DictWriter(csv_file, fieldnames=field_names)
-        writer.writeheader()
+        field_names = ["url", "classification", "category", "location", "content"]
+        writer = csv.writer(csv_file)
+        writer.writerow(field_names)
 
         while True:
             print(next_page)
