@@ -12,6 +12,8 @@ from typing import Tuple, List
 import tiktoken
 from openai import AzureOpenAI
 from dotenv import load_dotenv
+from qdrant_client import QdrantClient, models
+from sentence_transformers import SentenceTransformer
 
 
 class Chat:
@@ -22,7 +24,7 @@ class Chat:
 
     TOKEN_LIMIT = 500
 
-    def __init__(self):
+    def __init__(self, collection_name: str):
         """
         Initialize the Chat instance by loading environment variables,
         setting up the Azure OpenAI client, and initializing state variables.
@@ -37,6 +39,12 @@ class Chat:
             api_version=os.getenv("AZURE_API_VERSION"),
         )
 
+        self.dense_model = SentenceTransformer(
+            "nomic-ai/nomic-embed-text-v1.5", trust_remote_code=True
+        )
+        self.collection_name = collection_name
+        self.qclient = QdrantClient("http://localhost:6333", timeout=60)
+
     def _get_history(self):
         encoding = tiktoken.get_encoding("o200k_base")
         used_tokens = 0
@@ -47,6 +55,39 @@ class Chat:
             else:
                 break
         return usable_history
+
+    def _retrieval(self, query: str, classification: str):
+        rag_filter = models.Filter(
+            must=[
+                models.FieldCondition(
+                    key="classification",
+                    match=models.MatchValue(value=classification),
+                )
+            ]
+        )
+
+        query = "Provide a detailed overview of Aloy, the main protagonist of the Horizon video game series, including her origins, background, and role in the games’ narrative."
+        result = self.qclient.query_points(
+            collection_name=self.collection_name,
+            prefetch=[
+                models.Prefetch(
+                    query=self.dense_model.encode(query), using="nomic", limit=1
+                ),
+                models.Prefetch(
+                    query=models.Document(
+                        text=query,
+                        model="Qdrant/bm25",
+                    ),
+                    using="bm25",
+                    limit=1,
+                ),
+            ],
+            query_filter=rag_filter,
+            query=models.FusionQuery(fusion=models.Fusion.RRF),
+            with_payload=True,
+        )
+
+        return result.points[0]
 
     def get_rag_prompt(self, llm_query: str, documents: List[str]) -> Tuple[str, str]:
         """
@@ -125,7 +166,7 @@ class Chat:
 
         Args:
             system_prompt (str): The system-level instructions defining assistant behavior.
-            user_query (str): The user’s message or query.
+            user_query (str): The user's message or query.
 
         Returns:
             str: The assistant's response content.
