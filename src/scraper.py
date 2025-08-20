@@ -12,6 +12,7 @@ from urllib.parse import urljoin
 import requests
 from tqdm import tqdm
 from bs4 import BeautifulSoup, PageElement, Tag, NavigableString
+from ollama import chat, ChatResponse
 
 BASE_URL = "https://horizon.fandom.com"
 TARGET_URL = f"{BASE_URL}/wiki/Special:AllPages"
@@ -32,20 +33,52 @@ logging.basicConfig(
 
 
 def classify_page(title: str, text: str) -> str:
-    text_lower = text.lower()
-    title_lower = title.lower()
+    """
+    Classifies the content of the webpage into machine, society, location, object, character or other categories.
 
-    if "machine" in text_lower or "weaknesses" in text_lower:
-        return "machine"
-    if "tribe" in text_lower or "culture" in text_lower or "society" in text_lower:
-        return "society"
-    if "location" in text_lower or "region" in text_lower or "map" in text_lower:
-        return "geological location"
-    if "artifact" in text_lower or "weapon" in text_lower or "item" in text_lower:
-        return "object"
-    if "voice actor" in text_lower or "character" in title_lower:
-        return "character"
-    return "other"
+    Args:
+        title (str): the url of the webpage.
+        text (str): the content of the webpage.
+
+    Returns:
+        str: the classification of the webpage.
+    """
+    response: ChatResponse = chat(
+        model="gemma3",
+        messages=[
+            {
+                "role": "user",
+                "content": f"""
+                    Classify the webpage and its content into one of the following categories:
+                    - machine: this category contains information about machines in Horizon.
+                    - society: this category contains information about the cultures and peoples in Horizon.
+                    - location: this category contains information about specific locations and cities in the game.
+                    - object: this category contains information about in game objects.
+                    - character: this category contains information about specific characters.
+                    - other: this category contains information that does not fit into the other categories.
+
+                    This is the webpage url: {title}
+                    This is the webpage content:
+                    {text}
+
+                    return only one of the following classifications: machine, society, location, object, character, or other
+                """,
+            },
+        ],
+    )
+    if not response["message"]["content"].strip() in [
+        "machine",
+        "society",
+        "location",
+        "object",
+        "character",
+        "other",
+    ]:
+        logging.error(
+            "The classification for %s does not fit into any of the set categories.",
+            title,
+        )
+    return response["message"]["content"].strip()
 
 
 def get_content(soup: BeautifulSoup) -> list:
@@ -233,9 +266,12 @@ def safe_get(url: str, retries: int = 3, backoff: float = 2.0) -> str:
                 return "None"
 
 
-def scrape_data():
+def scrape_data() -> str:
     """
     Main function for scraping data and writing it to a csv
+
+    Returns:
+    str: path to the output data
     """
     # Get the current datetime object
     current_datetime = datetime.now()
@@ -266,6 +302,7 @@ def scrape_data():
             logging.debug("Following next index page: %s", next_url)
             main_soup, next_page = get_html(next_url)
     print("Finished data ingestion.")
+    return csv_path
 
 
 if __name__ == "__main__":
