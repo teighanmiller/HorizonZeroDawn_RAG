@@ -7,7 +7,6 @@ user queries, and retrieving responses from the LLM.
 """
 
 import os
-import json
 from typing import Tuple, List
 import tiktoken
 from openai import AzureOpenAI
@@ -56,7 +55,7 @@ class Chat:
                 break
         return usable_history
 
-    def _retrieval(self, query: str, classification: str):
+    def retrieval(self, query: str, classification: str):
         rag_filter = models.Filter(
             must=[
                 models.FieldCondition(
@@ -118,7 +117,9 @@ class Chat:
             """
         return system_prompt, rag_prompt
 
-    def get_reword_prompt(self, user_query: str) -> Tuple[str, str]:
+    def get_reword_prompt(
+        self, user_query: str, use_history: bool = True
+    ) -> Tuple[str, str]:
         """
         Create a system and user prompt to rewrite a query for better retrieval        Args:
             user_query (str): The raw user input query.
@@ -128,7 +129,10 @@ class Chat:
                 - system_prompt: Instructions for rewriting queries into a clearer format.
                 - reword_prompt: Reformulated user prompt with history for context.
         """
-        context_history = self._get_history()
+        if use_history:
+            context_history = self._get_history()
+        else:
+            context_history = ["None"]
         system_prompt = """
         You are an editor. You will be given a query, and a history of a chat with a RAG chatbot. Using this history and the query rewrite the query into a more understandable format.
         When rewriting the query remember that it is for a RAG system. You should highlight important information in the query and make it more understandable based on the history.
@@ -181,10 +185,10 @@ class Chat:
         return response.choices[0].message.content
 
 
-if __name__ == "__main__":
-    chat = Chat()
-    TEST_QUERY = "Who is Aloy?"
-    sys_prompt, user_prompt = chat.get_reword_prompt(TEST_QUERY)
-    new_query = chat.get_llm_response(sys_prompt, user_prompt)
-    q = json.loads(new_query)
-    print(q)
+# if __name__ == "__main__":
+#     chat = Chat()
+#     TEST_QUERY = "Who is Aloy?"
+#     sys_prompt, user_prompt = chat.get_reword_prompt(TEST_QUERY)
+#     new_query = chat.get_llm_response(sys_prompt, user_prompt)
+#     q = json.loads(new_query)
+#     print(q)
