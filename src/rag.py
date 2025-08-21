@@ -38,4 +38,4 @@ class RAG:
             with_payload=True,
         )
 
-        return result.points[0]
+        return result.points
