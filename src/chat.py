@@ -43,7 +43,7 @@ class Chat(RAG):
             "nomic-ai/nomic-embed-text-v1.5", trust_remote_code=True
         )
 
-        super.__init__(self.collection_name, self.dense_model)
+        super().__init__(self.collection_name, self.dense_model)
 
     def _get_history(self):
         encoding = tiktoken.get_encoding("o200k_base")
