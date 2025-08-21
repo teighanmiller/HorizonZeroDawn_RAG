@@ -11,11 +11,11 @@ from typing import Tuple, List
 import tiktoken
 from openai import AzureOpenAI
 from dotenv import load_dotenv
-from qdrant_client import QdrantClient, models
 from sentence_transformers import SentenceTransformer
+from rag import RAG
 
 
-class Chat:
+class Chat(RAG):
     """
     A class that provides an interface to interact with an LLM (via Azure OpenAI).
     It manages chat history, constructs prompts for RAG, and retrieves responses.
@@ -30,6 +30,7 @@ class Chat:
         """
         self.history: list[str] = []
         self.tokens_used: int = 0
+        self.collection_name = collection_name
 
         load_dotenv()
         self.client = AzureOpenAI(
@@ -41,8 +42,8 @@ class Chat:
         self.dense_model = SentenceTransformer(
             "nomic-ai/nomic-embed-text-v1.5", trust_remote_code=True
         )
-        self.collection_name = collection_name
-        self.qclient = QdrantClient("http://localhost:6333", timeout=60)
+
+        super.__init__(self.collection_name, self.dense_model)
 
     def _get_history(self):
         encoding = tiktoken.get_encoding("o200k_base")
@@ -54,39 +55,6 @@ class Chat:
             else:
                 break
         return usable_history
-
-    def retrieval(self, query: str, classification: str):
-        rag_filter = models.Filter(
-            must=[
-                models.FieldCondition(
-                    key="classification",
-                    match=models.MatchValue(value=classification),
-                )
-            ]
-        )
-
-        query = "Provide a detailed overview of Aloy, the main protagonist of the Horizon video game series, including her origins, background, and role in the games’ narrative."
-        result = self.qclient.query_points(
-            collection_name=self.collection_name,
-            prefetch=[
-                models.Prefetch(
-                    query=self.dense_model.encode(query), using="nomic", limit=1
-                ),
-                models.Prefetch(
-                    query=models.Document(
-                        text=query,
-                        model="Qdrant/bm25",
-                    ),
-                    using="bm25",
-                    limit=1,
-                ),
-            ],
-            query_filter=rag_filter,
-            query=models.FusionQuery(fusion=models.Fusion.RRF),
-            with_payload=True,
-        )
-
-        return result.points[0]
 
     def get_rag_prompt(self, llm_query: str, documents: List[str]) -> Tuple[str, str]:
         """
@@ -183,12 +151,3 @@ class Chat:
             ],
         )
         return response.choices[0].message.content
-
-
-# if __name__ == "__main__":
-#     chat = Chat()
-#     TEST_QUERY = "Who is Aloy?"
-#     sys_prompt, user_prompt = chat.get_reword_prompt(TEST_QUERY)
-#     new_query = chat.get_llm_response(sys_prompt, user_prompt)
-#     q = json.loads(new_query)
-#     print(q)
