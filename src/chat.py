@@ -70,19 +70,30 @@ class Chat(RAG):
                 - rag_prompt: User prompt containing the query and retrieved context.
         """
         rag_prompt = f"""
-        This is the question asked of you: {llm_query}
+        Question: {llm_query}
 
-        These are the pieces of information you have recalled based on the query:
+        Documents:
         {"\n\n-".join(documents)}
 
-        Using only these documents answer the question. The answer to the question should be clear, informative, and only contain relevant information from the information you recalled.
-        Your answer should sound like an answer from the AI GAIA from the video game.
+        Answer the question in an informative, concise way using only the information above.
         """
 
-        system_prompt = """
-            You are a hardcore fan of the Horizon game series. 
-            You have all of the content memorized and can answer all and any questions about the game.
-            """
+        # rag_prompt = f"""
+        # This is the question asked of you: {llm_query}
+
+        # These are the pieces of information you have recalled based on the query:
+        # {"\n\n-".join(documents)}
+
+        # Using only these documents answer the question. The answer to the question should be clear, informative, and only contain relevant information from the information you recalled.
+        # Your answer should sound like an answer from the AI GAIA from the video game.
+        # """
+
+        system_prompt = """You are providing information about the Horizon game series. Answer the questions clearly and accurately based only on the provided documents.
+        """
+        # system_prompt = """
+        #     You are a hardcore fan of the Horizon game series.
+        #     You have all of the content memorized and can answer all and any questions about the game.
+        #     """
         return system_prompt, rag_prompt
 
     def get_reword_prompt(
@@ -143,11 +154,17 @@ class Chat(RAG):
         Returns:
             str: The assistant's response content.
         """
-        response = self.client.chat.completions.create(
-            model="o4-mini",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_query},
-            ],
-        )
-        return response.choices[0].message.content
+        try:
+            response = self.client.chat.completions.create(
+                model="o4-mini",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_query},
+                ],
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(
+                f"The following exception occured: {e}, on the following prompt: {system_prompt, user_query}"
+            )
+            raise ValueError
