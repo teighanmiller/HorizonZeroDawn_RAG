@@ -240,7 +240,6 @@ class Chat(HybridRetriever):
         }
 
     def store_rating(self, rating):
-        print("Rating storage called.")
         self.use_data["rating"] = rating
         self._write_user_data()
 
