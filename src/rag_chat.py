@@ -12,14 +12,15 @@ import json
 import time
 import datetime
 from typing import Tuple, List
+import numpy as np
 import tiktoken
 from openai import AzureOpenAI
 from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
-from rag import RAG
+from src.hybrid_retriever import HybridRetriever
 
 
-class Chat(RAG):
+class Chat(HybridRetriever):
     """
     A class that provides an interface to interact with an LLM (via Azure OpenAI).
     It manages chat history, constructs prompts for RAG, and retrieves responses.
@@ -28,7 +29,7 @@ class Chat(RAG):
     TOKEN_LIMIT = 500
     ENCODING = "o200k_base"
     DATA_PATH = "data/user_data.csv"
-    FIELDNAMES = {
+    FIELDNAMES = [
         "timestamp",
         "used_tokens",
         "reword_time",
@@ -37,7 +38,8 @@ class Chat(RAG):
         "full_response_time",
         "query_classification",
         "query_cnt",
-    }
+        "rating",
+    ]
 
     def __init__(self, collection_name: str):
         """
@@ -47,6 +49,7 @@ class Chat(RAG):
         self.history: list[str] = []
         self.tokens_used: int = 0
         self.collection_name = collection_name
+        self.use_data = None
 
         load_dotenv()
         self.client = AzureOpenAI(
@@ -75,6 +78,7 @@ class Chat(RAG):
         """
         Closes file when object is removed from memory.
         """
+        self._write_user_data()
         if hasattr(self, "file") and not self.file.closed:
             self.file.close()
 
@@ -213,17 +217,17 @@ class Chat(RAG):
             )
             raise ValueError from e
 
-    def _write_user_data(
+    def _store_user_data(
         self,
         used_tokens: int,
-        date_time,
-        start_time,
-        reword_time,
-        rag_time,
-        response_time,
+        date_time: float,
+        start_time: float,
+        reword_time: float,
+        rag_time: float,
+        response_time: float,
         classification: str,
     ):
-        data = {
+        self.use_data = {
             "timestamp": date_time,
             "used_tokens": used_tokens,
             "reword_time": reword_time - start_time,
@@ -232,11 +236,23 @@ class Chat(RAG):
             "full_response_time": response_time - start_time,
             "query_classification": classification,
             "query_cnt": 1,
+            "rating": np.nan,
         }
-        self.writer.writerow(data)
-        self.file.flush()
+
+    def store_rating(self, rating):
+        print("Rating storage called.")
+        self.use_data["rating"] = rating
+        self._write_user_data()
+
+    def _write_user_data(self):
+        if self.use_data is not None:
+            self.writer.writerow(self.use_data)
+            self.file.flush()
+        self.use_data = None
 
     def get_response(self, query: str, progress_callback=None):
+
+        self._write_user_data()
 
         date = datetime.datetime.now()
         start_time = time.time()
@@ -284,7 +300,7 @@ class Chat(RAG):
             rag_sys_prompt
         )
 
-        self._write_user_data(
+        self._store_user_data(
             tokens,
             date,
             start_time,
