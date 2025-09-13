@@ -114,6 +114,7 @@ if prompt := st.chat_input("What is up?"):
         options=[1, 0],
         format_func=lambda x: "👍 Yes" if x == 1 else "👎 No",
         key="feedback_value",
+        index=None,  # nothing selected initially
         on_change=handle_feedback,
     )
 
