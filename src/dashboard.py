@@ -9,6 +9,12 @@ import altair as alt
 
 @st.cache_data(ttl=20)
 def get_data():
+    """
+    Reads the data from the user metrics file into a Pandas DataFrame.
+
+    Returns:
+        pd.DataFrame: DataFrame containing all tracked application metrics.
+    """
     return pd.read_csv("data/user_data.csv")
 
 
@@ -39,8 +45,10 @@ def get_unique_cnt(series: pd.Series) -> pd.DataFrame:
     return pd.DataFrame(series.value_counts())
 
 
+# Load the data
 df_reshaped = get_data()
 
+# Set page settings
 st.set_page_config(
     page_title="Horizon RAG Chatbot Dashboard",
     layout="wide",
@@ -51,14 +59,16 @@ st.title("Dashboard")
 
 alt.theme.enable("dark")
 
-col = st.columns((1.5, 4.5, 2), gap="medium")
+# Set column width and spacing
+col = st.columns((1.5, 4.5, 2), gap="large")
 
 with col[0]:
-
+    # Create a graph for likes, dislikes and not rated metrics
     st.markdown("### User Interaction Metrics")
 
     ratings = df_reshaped["rating"]
 
+    # Calculate rating metrics
     pos = int(aggregate_values(ratings))
     neg = int(
         len(ratings[ratings.notna()]) - aggregate_values(ratings[ratings.notna()])
@@ -87,6 +97,7 @@ with col[0]:
 
     st.altair_chart(chart, use_container_width=True)
 
+    # Create counters for tokens and number of queries
     st.metric(
         label="Total Token Count",
         value=aggregate_values(df_reshaped["used_tokens"]),
@@ -99,6 +110,7 @@ with col[0]:
 
 
 with col[1]:
+    # Graph of the processing time breakdown for RAG per query in the app.
     st.subheader("Processing Time Breakdown for RAG")
 
     df_plot = df_reshaped[
@@ -137,6 +149,7 @@ with col[1]:
 
     st.altair_chart(chart, use_container_width=True)
 
+    # Create a graph for token usage by query.
     st.subheader("Token by Query Breakdown")
 
     df_tokens = pd.DataFrame(
@@ -162,6 +175,7 @@ with col[1]:
     st.altair_chart(chart, use_container_width=True)
 
 with col[2]:
+    # Create a table that shows the number of queries for each classification.
     classifications = (
         df_reshaped.groupby("query_classification")
         .size()
