@@ -2,7 +2,7 @@ import uuid
 import pandas as pd
 from qdrant_client import QdrantClient, models
 from sentence_transformers import SentenceTransformer
-from scraper import scrape_data
+from src.scraper import scrape_data
 
 DENSE_DIM = 768
 BATCH_SIZE = 50
