@@ -86,13 +86,12 @@ This blends information retrieval + natural language generation — useful for c
 
 3. **Prepare knowledge data**  
    - Place lore / documents into `data/`  
-   - (Optional) Run preprocessing script  
+   - (Optional) Run preprocessing script. You can download the preloaded data set from this repo as well.
 
 4. **Index the documents**  
    ```bash
    python index_documents.py
    ```
-   This can take a while and is optional, you can download the preloaded data set from this repo as well.
 
 5. **Run the app**  
    ```bash
