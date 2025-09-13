@@ -59,7 +59,7 @@ This blends information retrieval + natural language generation — useful for c
 | Embeddings / Vector Store (HuggingFace, Qdrant, BM25) | Hybrid search and retrieval                         |
 | LLM module (OpenAI API and open-source LLMs)          | Response generation                                 |
 | Backend service                                       | Query handling and serving                          |
-| CLI / Frontend interface                              | User interaction                                    |
+| Frontend interface (Streamlit)                        | User interaction                                    |
 
 **Technologies**:
 
