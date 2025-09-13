@@ -7,7 +7,7 @@ import pandas as pd
 import altair as alt
 
 
-@st.cache_data
+@st.cache_data(ttl=20)
 def get_data():
     return pd.read_csv("data/user_data.csv")
 
