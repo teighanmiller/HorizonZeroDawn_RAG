@@ -1,0 +1,967 @@
+[
+    {
+        "Question": "What is the name of the main protagonist in the Horizon series?",
+        "Answer": "The main protagonist of the Horizon series is Aloy, a young hunter from the Nora tribe who was outcast at birth and later becomes a skilled warrior and seeker. She is central to the story because she is a genetic clone of Elisabet Sobeck, designed by GAIA as a contingency to save the world.",
+        "relevant": [
+            {
+                "74360724-028b-5fcb-9b34-3ee76518a711": "Aloy is the main protagonist of the Horizon series. A Nora Brave , Seeker and machine hunter of unparalleled skill, Aloy is the genetic clone of 21st century roboticist and engineer Dr. Elisabet Sobeck ."
+            },
+            {
+                "3f0c7995-f3f4-51e3-8ead-e0ced6443933": "This category is for the various characters within the world of Horizon ."
+            },
+            {
+                "41f7282d-537b-520c-a073-6ca87740ed04": "Horizon is a series of third-person action role-playing games and multimedia franchise created by Guerrilla Games .\nHorizon takes place in a \"post-post-apocalyptic\" future, where nature has reclaimed the ruins of civilization, animalistic machines dominate the landscape, and humans live in tribal societies. [ 1 ] The story primarily centers around Aloy , a member of the Nora tribe, who seeks to unravel the mysteries of her world while also protecting it from various threats.\nProject Skyline Horizon Online Project\nUntitled Netflix series [ 2 ] (cancelled) [ 3 ]"
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.8772729635238647,
+        "Answer Relevancy": 0.7621560096740723
+    },
+    {
+        "Question": "Who were Aloy's biological parents?",
+        "Answer": "Aloy has no biological parents in the traditional sense. She is a genetic clone of Dr. Elisabet Sobeck, created by the AI GAIA. This makes her uniquely suited to access Old World technology and facilities, since her genetic identity matches that of Sobeck.",
+        "relevant": [
+            {
+                "59bc6073-dd98-56d4-8a5a-6070e3922b61": "19 years later when HADES attacked the Nora tribe and discovered Aloy, it became obsessed with destroying her due to her sharing Elisabet's genetic code, and thus endangering its existence. It was after this encounter that Aloy discovered Elisabet's existence after accessing a Focus used by Olin. Initially believing Elisabet to be her biological mother, Aloy embarked on a personal journey to learn who she was, hoping it would reveal her own mysterious origin (reluctantly accompanied by the Banuk researcher Sylens ). This led to Aloy and Sylens discovering the origin of humanity's extinction from the Faro Plague, Elisabet's work on Project: Zero Dawn, and Ted's horrific attempt to keep APOLLO from ever being discovered and GAIA itself. Aloy was deeply horrified to learn the circumstances of her own creation but developed a deep admiration for her \"mother\"."
+            },
+            {
+                "cbbbbd47-f3fd-5f11-ae5c-febbce759258": "https://en.wikipedia.org/wiki/Aloy"
+            },
+            {
+                "9c398881-6906-5859-988a-1858349ba42f": "Rost was a major character in Horizon Zero Dawn and a cameo character in Horizon Forbidden West . He was a Nora outcast , and the guardian of the Nora huntress Aloy , herself an outcast since birth. Tragic circumstances led him to willingly become an outcast for the rest of his life. He raised Aloy from infancy and trained her, ultimately sacrificing himself to save her life. He is\u00a0responsible for her unparalleled skills as a hunter, tracker and warrior. He is the only parent she has ever known, and the lone influential figure in her life."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.9261936545372009,
+        "Answer Relevancy": 0.5829300284385681
+    },
+    {
+        "Question": "What is the purpose of the GAIA AI system?",
+        "Answer": "GAIA is the central artificial intelligence created in Project Zero Dawn. Its mission was to rebuild Earth's ecosystem after the Faro Plague wiped out all life. GAIA managed terraforming by controlling subordinate functions such as AETHER for atmosphere, POSEIDON for water purification, and HEPHAESTUS for machine production.",
+        "relevant": [
+            {
+                "083fd6c9-d24b-530d-8811-81b62882ad16": "Project Zero Dawn was a massive global network of underground bunkers and automated manufacturing and cloning facilities dedicated to terraforming and restoring the inevitably ruined Earth into an ecosystem once again capable of sustaining life. When the Earth became livable once more, humans and animals would be reintroduced to a rejuvenated ecosystem. At the center of the system was a hyper-powerful artificial intelligence system called GAIA , who would oversee operations as long as needed. Zero Dawn's main goal was to create GAIA and her sub-functions , as well as the facilities that she would use to shut down the Swarm and restore the Earth. Many of the facilities GAIA would employ would be built, not by the Zero Dawn team, but by GAIA herself. These included the underground Cauldrons , which would create the machines; GAIA used these machines to restore Earth's biospheres and reintroduce life."
+            },
+            {
+                "b7e1aa93-8755-5fae-9f7c-b9b3641474e4": "ELEUTHIA is the subordinate function of GAIA charged with birthing a new generation of humanity .\nELEUTHIA\u2019s function was to re-establish the human species after Earth was habitable again. Lead by Alpha Patrick Brochard-Klein , cradles were built across the globe, including ELEUTHIA-1 , ELEUTHIA-2 and ELEUTHIA-9 , each containing the necessities to birth new humans and raise them during early childhood, with multiservitors acting as the carers, disciplinarians and healers. [ 1 ] As the children grew up, they were intended to be released in the cradle's Lyceum, to be further educated by APOLLO .\nELEUTHIA's function of re-establishing the human species was successful. However, as a result of Ted Faro purging the APOLLO database, these new humans were never able to enter Lyceum and be educated further. [ 2 ] As a result of being trapped in an age inappropriate space with no explanation as to why they couldn't enter Lyceum, the children became resentful of and frustrated with the multiservitors. [ 2 ] [ 3 ] [ 4 ] Also caused by the purge of the APOLLO database, Project Zero Dawn reverted to its default language of English, causing the multiservitors to only speak that language, limiting the new humans to only knowing English. [ 5 ]\nAs the new humans approached adulthood, the cradles' food supplies were exhausted, forcing the multiservitors to release the new humans into the new world. [ 6 ] Bereft of knowledge beyond a kindergarten level, they went on to be the ancestors of the tribes that now inhabit the world.\nOn August 26, 3020, [ 7 ] the Extinction Signal sent by Nemesis arrived at GAIA Prime and turned her subordinate functions, including ELEUTHIA, into independent AIs. This led the subfunction HADES to initiate his purpose of destroying the biosphere. To prevent this, GAIA initiated her self-destruct in an attempt to destroy HADES, which would also destroy her and the other sub-functions. However, in response to this, HADES released a virus that unshackled all the other subordinate functions from GAIA, allowing them to escape. [ 8 ] ELEUTHIA found refuge in the Ninmah Research Lab .\nYears later, Beta and Verbena were sent to recover ELEUTHIA, which they succeeded in doing so, sending it to the Far Zenith base via a transmitter. [ 9 ]\nAfter Far Zenith was defeated, ELEUTHIA was recovered and reinstated into GAIA. [ 10 ]\nELEUTHIA is named after the Greek goddess of childbirth, more commonly referred to as Eileithyia."
+            },
+            {
+                "4097a90d-3d54-5ca1-8df0-ebdb933cb8bc": "ARTEMIS is the subordinate function of GAIA tasked with preserving and reintroducing animal life to the planet as part of Project Zero Dawn ."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.9226258993148804,
+        "Answer Relevancy": 0.5653688371181488
+    },
+    {
+        "Question": "Which ancient corporation was responsible for creating the Faro Plague?",
+        "Answer": "The Faro Plague was created by Faro Automated Solutions, a corporation led by Ted Faro. The company built self-replicating, biomass-consuming war machines with no shutdown protocols. When these machines went rogue, they consumed all living matter on Earth.",
+        "relevant": [
+            {
+                "60a262e1-32d6-57ee-a263-f57ecdda28e3": "The Hartz-Timor Energy Combine was the 21st century corporate entity that owned the FAS Chariot swarm that grew into the Faro Plague .\nIn the mid-21st century, the robotics and technology corporation Faro Automated Solutions developed the most advanced combat platform ever: the Chariot line of combat automatons. Designed around the concept of a swarm of artificially intelligent, self-replicating robots, virtually immune from hacking, able to consume organic matter as fuel , and with the ability to instantly enslave enemy automatons, the robots were designed to be virtually unstoppable by all but their masters. They were very successful on the military market; swarms were purchased and deployed by numerous clients, including corporations such as the Hartz-Timor Energy Combine. It procured a complete swarm for security and enforcement operations to protect the Combine's interests in the South Pacific region, including in and around Indonesia.\nHowever, in 2064, the Hartz-Timor swarm experienced a \"glitch\" in which it became an independent entity, answering only to itself, and began attacking Hartz-Timor personnel and other non-Chariot company robots. [ 1 ] All attempts to regain control failed, as the robots' OS security had no backdoor, and was built around a virtually unbreakable encryption protocol. [ 2 ] The swarm grew and spread, becoming an existential threat to life on Earth. With no chance of stopping it, a plan was enacted to create a global terraforming system that would, after life was exterminated, finally brute-force the swarm's deactivation codes, shut the swarm down, and restore life to the planet, including humans. This plan was called Project Zero Dawn . [ 3 ] In tandem with a plan to slow the swarm down, known as Operation: Enduring Victory , [ 4 ] Zero Dawn succeeded in doing so; nearly a thousand years after the Faro Plague exterminated all life, a new biosphere and new world existed, though this world was considerably different from the old one.\nHowever, as outlined, this was a replacement of the doomed old world, not the salvation of it. Fifteen months after the Hartz-Timor Swarm stopped responding to the commands of its owners and became the Faro Plague, it overran the planet and exterminated all life. The Hartz-Timor Energy Combine, along with the rest of the world, was obliterated.\nIt is strongly implied that the Combine was a joint venture between the East Timorese government and the Hartz Corporation."
+            },
+            {
+                "42ea10f3-2174-5a07-a769-b678e573a947": "In response to the inevitable extinction of life on Earth due to the Faro Plague devastating the biosphere, the United States Robot Command (USRC), under the direction of General Aaron Herres , implemented a war plan called Operation: Enduring Victory . As part of this plan, Mechanized Response Brigades were sent out across the United States to slow down the Faro Plague and buy the time for Project Zero Dawn to be completed. To this end, the MRBs were heavily engaged and constantly on the move between warzones. Each one fostered mixed results."
+            },
+            {
+                "68cc19fe-de7f-56ce-8441-0b178f7d9995": "RECorp was a large corporation in the Old World, especially during the 2030s .\nDuring the early to mid-2030s, RECorp was among the industry giants in robot technology. [ 1 ]\nHundreds of years later, Walter Londra looked back on RECorp technology as being \"cheap drones and misfiring railguns for bottom-feeders and petty autocrats\", but that at one point, \"they had a blue-chip research division\". [ 2 ]\nLike every other organization on Earth, RECorp fell during the Faro Plague .\nWhile fleeing from Sirius , Londra considered the remains of RECorp's testing grounds and R&D labs as being one of the best places to search for a weapon or prototype that could be used to fight Nemesis . [ 2 ]"
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.8566339612007141,
+        "Answer Relevancy": 0.6362572312355042
+    },
+    {
+        "Question": "What are the animal-like machines in the Horizon games called?",
+        "Answer": "The robotic creatures encountered in the games are known simply as Machines. They resemble real animals like horses, birds, and big cats, as well as prehistoric creatures such as dinosaurs. Each type of machine serves a specific ecological purpose, like harvesting resources or maintaining balance in the biosphere.",
+        "relevant": [
+            {
+                "914e1e57-d26f-5aec-8543-7b542efbb098": "The Grazer is a machine in Horizon Zero Dawn , Horizon Forbidden West , and Horizon Call of the Mountain ."
+            },
+            {
+                "c9e3efd9-8515-55d2-983b-64a9c672f27f": "The Grazer is a machine in Horizon Zero Dawn , Horizon Forbidden West , and Horizon Call of the Mountain ."
+            },
+            {
+                "d437335e-a16b-536c-a8e9-93fd1ea472d0": "Apex machines , also known as the \" new breed \" in the comic series or \" hunter-killers \", is a variant of a machine initially seen in the Horizon Zero Dawn comic series , as well as in Horizon Forbidden West . Apex variant machines possess black armor and purple muscle, along with increased stats, often different weaknesses and resistances, and often with different types of elemental canisters and attacks."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 0.0,
+        "F1_Score": 0.0,
+        "Cosine Similarity": 0.8756833672523499,
+        "Answer Relevancy": 0.7504264712333679
+    },
+    {
+        "Question": "Who was Elisabet Sobeck, and what role did she play in Project Zero Dawn?",
+        "Answer": "Elisabet Sobeck was a brilliant scientist and engineer who led Project Zero Dawn. She created GAIA and its subordinate functions to restore Earth's ecosystems after the Faro Plague. She sacrificed herself to protect the project by sealing its facility, ensuring GAIA's survival and humanity's eventual rebirth.",
+        "relevant": [
+            {
+                "2d88bda5-2eb7-5970-83fe-c9c844287b08": "Elisabet was relentless in her efforts to complete Project Zero Dawn and give life a chance at reestablishment after its eradication. The enormous loss of life caused by the Faro Plague was a source of great distress for her. She placed great importance on making sure the AI was able to feel the weight of the choices it was making, realizing that GAIA needed to be capable of emotion and caring for others to fulfill its role. Sobeck knew that if the AI could not have empathy, it could not nurture new life as GAIA's namesake professed. She was stunned and overjoyed when GAIA professed a sense of grief at the loss of life during the Faro Plague, seeing it as the breakthrough to ensure Zero Dawn succeeded. When Faro suggested a killswitch be installed, she became distressed, equating GAIA to a living being and believed that activating the switch would be tantamount to murder, yet relented when GAIA agreed with Faro's reasoning. She had little patience for trivial concerns and annoyances, wanting to get things done rather than talk, often taking on more work since she didn't always trust others to do it. Above all, she was selfless and decisive and sacrificed her life without hesitation to save Zero Dawn and her fellow Alphas."
+            },
+            {
+                "674a265b-5ddb-5308-8e79-ecff6ea9fe3f": "Elisabet was relentless in her efforts to complete Project Zero Dawn and give life a chance at reestablishment after its eradication. The enormous loss of life caused by the Faro Plague was a source of great distress for her. She placed great importance on making sure the AI was able to feel the weight of the choices it was making, realizing that GAIA needed to be capable of emotion and caring for others to fulfill its role. Sobeck knew that if the AI could not have empathy, it could not nurture new life as GAIA's namesake professed. She was stunned and overjoyed when GAIA professed a sense of grief at the loss of life during the Faro Plague, seeing it as the breakthrough to ensure Zero Dawn succeeded. When Faro suggested a killswitch be installed, she became distressed, equating GAIA to a living being and believed that activating the switch would be tantamount to murder, yet relented when GAIA agreed with Faro's reasoning. She had little patience for trivial concerns and annoyances, wanting to get things done rather than talk, often taking on more work since she didn't always trust others to do it. Above all, she was selfless and decisive and sacrificed her life without hesitation to save Zero Dawn and her fellow Alphas."
+            },
+            {
+                "9e9cf82e-9a57-54c3-afbd-e593f8f6f8c1": "At the Zero Dawn staging area, Sobeck personally recorded a presentation to prospective Zero Dawn candidates regarding the nature of Zero Dawn."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.9433807730674744,
+        "Answer Relevancy": 0.6368424296379089
+    },
+    {
+        "Question": "What is the significance of the Focus device that Aloy uses?",
+        "Answer": "The Focus is a small triangular augmented reality device left over from the Old World. It allows Aloy to scan machines, detect weak points, read ancient data, access holograms, and communicate with others who have a Focus. It is her key tool for uncovering the secrets of the past.",
+        "relevant": [
+            {
+                "4b624823-0923-580e-ad50-4b307a016c3d": "Aloy activated the Focus' interface, finding out that the patrolling patterns of the Watchers guarding the herd were marked by it, using small holographic arrows."
+            },
+            {
+                "ecefecfd-5c91-5076-94d0-09d8d28d260c": "Aloy: What's that? It's got a device, like the one I found."
+            },
+            {
+                "89d54936-1561-5541-82d8-8db786dd49c6": "Aloy grabbed the weapon as the Focus finished its analysis, with the letters \"BOW\" appearing attached to it."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.9310396909713745,
+        "Answer Relevancy": 0.6442551612854004
+    },
+    {
+        "Question": "What event caused the near-extinction of humanity in the Horizon universe?",
+        "Answer": "Humanity was nearly wiped out by the Faro Plague, a swarm of self-replicating combat machines created by Faro Automated Solutions. These machines consumed biomass for fuel and multiplied uncontrollably, devouring all life on Earth until Project Zero Dawn was enacted.",
+        "relevant": [
+            {
+                "10ab9f4f-49de-5602-b483-06cff5033645": "This is the timeline of all major events and happenings in the Horizon universe, divided into sections representing the world before and after the Faro Plague . All dates are in Anno Domini (AD). Other date formats will be in parentheses."
+            },
+            {
+                "11bafd22-2081-57a5-9528-9eb3a008d6f4": "When the Chariot swarm owned by the corporation known as Hartz-Timor went rogue due to a programming glitch, the robots defaulted to biomatter conversion as a fuel source to fuel their rapidly and exponentially increasing numbers. Thus the swarm, which became known as the Faro Plague , became an existential threat to life on Earth. [ 5 ] The threat was realized when the Plague ultimately consumed the biosphere, eradicating every form of life and leaving the Earth completely sterile. In the global fight against the Plague known as Operation: Enduring Victory , the scope and nature of casualties and fatalities caused by the nano-haze were highly disturbing to witnesses. [ 6 ]"
+            },
+            {
+                "c5109150-2a8f-56d7-8b7e-3ea4d4a8bcca": "The Extinction Signal , formerly known as the Mysterious Signal , was a signal broadcast by Nemesis in an attempt to make Earth unviable for Far Zenith to flee to."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.9323516488075256,
+        "Answer Relevancy": 0.5872060537338257
+    },
+    {
+        "Question": "Who was Ted Faro, and why is he infamous in the series?",
+        "Answer": "Ted Faro was the CEO of Faro Automated Solutions. He is infamous for causing the Faro Plague by selling self-replicating war machines with no failsafe. Later, he erased the APOLLO database, which contained all human knowledge, believing future generations should start without history an act that left humanity ignorant of its past.",
+        "relevant": [
+            {
+                "ea4f713d-b31b-5a90-b0a5-82be25aa0857": "Theodor \"Ted\" Faro (December 24, 2013 - 3041 ) is a prominent antagonist in Horizon Zero Dawn and a minor antagonist in Horizon Forbidden West . Ted was the founder, owner, and chairman of the robotics and technology corporation Faro Automated Solutions (FAS). His business savvy allowed him to build FAS into the most successful and influential corporation of all time, becoming world famous for its automated platforms ranging from personal servants to military technology. However, his greed, recklessness and lack of foresight led to the extinction of all life on Earth via an advanced military platform, also known as the Faro Plague , whose design and development he personally conceived and oversaw."
+            },
+            {
+                "743c7b6f-e85e-5330-920b-cf593bb53bb8": "While publicly reputed as \"the man who saved the planet\", [ 22 ] Faro was a pathological narcissist, prizing his reputation above all else. His high levels of success fuelled his ego to unimaginable heights. He was also petulant, impulsive, and unstable when confronted with the truth or consequences of his actions, and this created an unfathomable need to be in control. When reality hits him regarding his mistakes, he acts like an angsty teenager, throwing tantrums and attempting to regain control in any way he can. When the apocalypse came, his actions were like the fantasies of a teenage boy, creating a harem, and attempting to show he was smarter than what people knew he was.  Few of his peers have managed to see through the facade of his outer business manganate persona, Walter Londra being one of them, and regarded Ted with skepticism. [ 23 ]"
+            },
+            {
+                "8a6c6bf1-c1b5-557b-9e24-bc33f43c58db": "Despite his instability and avarice, one should not confuse Ted's reckless ambition for stupidity. Faro was highly skilled and competent in the world of business, a proven risk taker, had an excellent eye for talent, and was a capable, though manipulative, negotiator. While his initial forays did not yield much success, he did show enough persistence and grit to get FAS off the ground and create some of the most successful pieces of tech in the industry, the Focus being a prime example. His risk taking nature and ability to find talent brought him Elisabet Sobeck, who propelled his company to the top of the corporate world, though it would also define his impulsivity. Faro was capable of playing his hand well in negotiations and in the press, even if some of the methods were underhanded, and he became the most well known magnate and made his company the wealthiest in history."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 0.0,
+        "F1_Score": 0.0,
+        "Cosine Similarity": 0.8850315809249878,
+        "Answer Relevancy": 0.6036410331726074
+    },
+    {
+        "Question": "What is the function of the subroutine HADES?",
+        "Answer": "HADES is one of GAIA's subordinate functions. Its purpose was to reset terraforming attempts if they failed by triggering mass extinction events. In the events of Horizon Zero Dawn, HADES becomes corrupted and attempts to wipe out all life permanently.",
+        "relevant": [
+            {
+                "ffdb3428-4675-5eab-814c-999e59b9f793": "Approximately 756 years after the Faro Plague was shut down, the humans of the new world lived in tribes . One such tribe, the Carja , became embroiled in a civil war . Meanwhile, a signal of unknown origin was transmitted to the Zero Dawn terraforming system. The system was composed of a central artificial intelligence, designated GAIA , along with nine subordinate functions , each responsible for specific aspects of the terraforming process under GAIA's direction. One of these subordinate functions was designated HADES . Should the terraforming process go awry, HADES' function was to reverse it, returning the Earth to its lifeless, sterile state so that GAIA could start over. The signal, however, turned HADES and the other eight subordinate functions into independent AIs. HADES sought to reverse the terraforming process even though it had been successful; GAIA stopped it from attempting to use the terraforming system to do so by self-destructing."
+            },
+            {
+                "b6de8183-c830-50d4-b7c2-a779c3c04039": "HADES, posing as a deity from their religion, had the Eclipse exhume several of the Faro Plague's Kopesh and Scarab units and ultimately mount an assault to gain control of the Spire , one of the transmission towers that GAIA had constructed worldwide to transmit the robots' deactivation codes once she had brute-forced them. HADES intended to transmit a signal that would reactivate the robots, and almost succeeded. However, it was defeated by the efforts of Aloy , a young hunter from the Nora tribe. Aloy had, in fact, been created by GAIA using genetic material from the then long deceased Dr. Elisabet Sobeck, the primary person responsible for its creation, as a means of stopping HADES and eventually rebuilding and rebooting GAIA after it self-destructed. Aloy succeeded in defeating HADES by uniting the Carja, the Nora, the Banuk, and the Oseram against the Eclipse, and personally stopped HADES from reawakening the Faro Plague."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 0.0,
+        "F1_Score": 0.0,
+        "Cosine Similarity": 0.9503006935119629,
+        "Answer Relevancy": 0.5892333745956421
+    },
+    {
+        "Question": "Which machine resembles a giant bird and can attack from the air?",
+        "Answer": "The Stormbird is a massive flying machine that resembles a giant predatory bird. It is heavily armed with electrical attacks and is considered one of the most dangerous aerial machines Aloy encounters.",
+        "relevant": [
+            {
+                "e3dee17b-e0f1-5748-8a3a-0cafb82a7b6c": "The Skydrifter is a machine in Horizon Forbidden West .\nThe Skydrifter closely resembles an Archaeopteryx . Its head is bird shaped, with the main scanning eye in between the \"beak.\" Its body is slender, with a chest mounted tracking sprayer, two antenna on the back, and two big, feather styled metal wings. The machine has small legs that end in feet with three long claws, like a normal bird, and with two thin thrusters on the sides of the thighs it uses to quickly take off. There are two power cells on its hindquarters next to a long flexible limb that ends with a flat, diamond-shaped tail covered in razor sharp metal pieces that also are in a feather-styled pattern. The head, wingarms, and hind legs are white.\nThe Skydrifter is an aerial recon machine, generally gliding a few meters above the ground and watching over acquisition machines below.\nSkydrifters are truly a masterful recon. Their eye is equipped with an advanced scanning unit able to detect any threat, even when the threat is hiding in tall grass without being spotted first. It scans this area in a cone while flying, or when it detects an anomaly. Being hit with this, regardless if the Skydrifter or something else saw you or not normally, will immediately get you detected. The unit on its chest is also able to spray an enemy, so it can be found if it goes back into stealth. The boosters on its hind legs allow it to fly quickly and move with incredible agility. The tail is razor sharp and used as an effective melee weapon.\nSome Skydrifters are also equipped with antenna, allowing them to call for reinforcements if a threat is detected.\nThe Skydrifter can scan with its scanning unit, but the unit can be shot off, leaving it unable to scan for those in stealth. Its tail can also be torn off, leaving it unable to use its tail melee attacks. The boosters are a vulnerable spot, especially when overheated."
+            },
+            {
+                "f308b50a-213f-52c4-9c1b-3a60985816e8": "Stormbirds employ powerful electric attacks from the air, such as carpet bombing with electrical energy projectiles, and equally powerful melee attacks on the ground using their beaks, talons, and tails. Additionally, they employ their wings as weapons by using them to generate damaging wind gusts, and to execute air-to-ground melee attacks. They can also use their weight to crush an enemy that moves directly beneath them while airborne. They possess no elemental weaknesses, and are resistant to Shock damage."
+            },
+            {
+                "6c5c7210-2516-5cd3-a8fd-7f7cfc13d4d2": "Resembling a giant lobster, sea scorpion, or similar aquatic arthropod, the Horus stands on ten legs with four long, triple-jointed legs supporting the segmented \"tail\" while six shorter legs support the front of the main chassis. Covered in thick, black armor plating, it has four massive tentacles at its front. Each one is as least as long as the Horus' body and is tipped with an enormous drill with a camera on the tip that can also act like a scout, [ 14 ] designed to penetrate into heavily armored fortifications and bunkers as well as grab on to things. These tentacles also have rings of spikes at different points along the tentacle."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 0.0,
+        "F1_Score": 0.0,
+        "Cosine Similarity": 0.8655402660369873,
+        "Answer Relevancy": 0.632398533821106
+    },
+    {
+        "Question": "What tribe is Aloy raised by?",
+        "Answer": "Aloy is raised by the Nora, a matriarchal and deeply religious tribe that worships the All-Mother. However, because of her mysterious birth, Aloy is treated as an outcast and raised outside the tribe by Rost.",
+        "relevant": [
+            {
+                "852b8225-2e51-5aa0-a49e-cd5d4bc69905": "https://en.wikipedia.org/wiki/Aloy"
+            },
+            {
+                "f37be217-bfe1-504a-a74b-8b6ce2ffb32c": "A while later, in the year 3021 , a mysterious infant girl was discovered in the heart of All-Mother Mountain, in front of the door that represented the Nora goddess. The High Matriarchs disagreed over what she was. Teersa thought her to be a blessing, but others, including Lansra , believed her to be a curse, [ 7 ] as she seemingly had no mother, and motherhood is highly sacred to the Nora. They ultimately decided to turn her over to Rost to raise, which he accepted. [ 3 ] Devoutly following the tribe\u2019s religious practices even though he was an outcast, he named her Aloy in a Naming Ritual blessed and witnessed only by Teersa. When Lansra arrived and angrily rebuked them by performing it on her, and worse, on what she believed to be a curse. Undeterred, Rost's fatherly love for Aloy remained unaffected. [ 8 ]"
+            },
+            {
+                "4fd014d5-5220-5eb0-861b-2755daaa1783": "The facility behind the door is ELEUTHIA-9, a Cradle facility where the first humans after the Faro Plague were gestated in and birthed from artificial wombs. Aloy learns that the early humans were raised by multiservitors, but when the food supply was depleted, they were forced out into the wilds. The APOLLO function is also mysteriously offline, which explained the lack of knowledge the tribes had of the Old Ones. Further into the Cradle, Aloy scans a datapoint , a final message from GAIA. GAIA explains that data transmission from an unknown source corrupted the GAIA Prime facility, turning the subordinate functions into self-aware chaotic entities. HADES took this to mean that GAIA had failed and took control of her terraforming system, intending to destroy the world as it was designed to do. GAIA ordered her Prime reactor to overload in an attempt to destroy all her subordinate functions including HADES, though this would mean she would also be destroyed, and warned that without her, the terraforming system would gradually break down, causing Aloy to realize this was the cause of the Derangement. GAIA sent out a transmission to ELEUTHIA-9 to gestate an embryo with Elisabet Sobeck's genetic material, granting her unilateral access to Zero Dawn facilities in hopes that this clone could rebuild her. At the last minute, HADES sent out a virus that destroyed the coding that bound it to GAIA's main system, letting it escape before the Prime reactor overloaded. Though fearing the possibility Aloy wouldn't be able to discover her message, GAIA maintained confidence that Aloy, addressing her as Elisabet, would find a way and instructed her to find the Master Override at the ruins of GAIA Prime, giving her the means to purge HADES, for its very existence made rebuilding GAIA too great of a risk. [ 25 ]"
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.8868193030357361,
+        "Answer Relevancy": 0.6595189929008484
+    },
+    {
+        "Question": "Who serves as Aloy's guardian and father figure at the beginning of Horizon Zero Dawn?",
+        "Answer": "Rost, a loyal and skilled hunter of the Nora, raises Aloy after she is cast out from the tribe. Though he is not her biological father, he acts as her protector and mentor until his death during the Proving.",
+        "relevant": [
+            {
+                "9c398881-6906-5859-988a-1858349ba42f": "Rost was a major character in Horizon Zero Dawn and a cameo character in Horizon Forbidden West . He was a Nora outcast , and the guardian of the Nora huntress Aloy , herself an outcast since birth. Tragic circumstances led him to willingly become an outcast for the rest of his life. He raised Aloy from infancy and trained her, ultimately sacrificing himself to save her life. He is\u00a0responsible for her unparalleled skills as a hunter, tracker and warrior. He is the only parent she has ever known, and the lone influential figure in her life."
+            },
+            {
+                "17f4c086-5a43-5aa0-847c-38ca8ba26171": "Arnak is a mentioned-only character in Horizon Zero Dawn .\nArnak was a Banuk hunter who impregnated Ili , the mate of his werak 's chieftain, Signak , during a night together. [ 2 ] After the birth of the child, Tektuk , he was claimed by the Signak as his son. [ 3 ] Sometime later, Signak was found dead. Believing Arnak to be responsible, the werak stripped him of his clothing and exiled him from Ban-Ur . [ 4 ]\nNo longer having a home, Arnak travelled south, spending years in exile as he travelled across the Sacred Lands [ 5 ] and the Sundom . [ 1 ] choosing to deal with the grief of losing his chance to be a father by painting on the sides of cliffs, weaving Banuk figures , and writing messages for Tektuk that he knew would never be read by him. In these messages, he confessed to his night with Ili, wondering if Ili killed Signak because he found out the truth and she needed to defend herself. [ 2 ]\nAt one point, Arnak experienced a vision, giving him hope that one day, in death if not in life, he would meet Tektuk again. [ 6 ]\nArnak's status and current location are unknown.\nAt some point after his exile, the Banuk declared Arnak innocent, now seeing him as a wandering hero. [ 7 ] As the Banuk wanted the Banuk figures that Arnak wove, Cantarah enlisted Aloy to help find them, of which she was able to find six.\nA figure that looks identical to a Banuk figure can be seen on Aloy's bed as a child. [ 8 ] Whether this is another Banuk figure woven by Arnak is unknown."
+            },
+            {
+                "fdff2425-eab2-5d7a-956c-535a4b402ded": "Aloy was included in the original pitch for Horizon Zero Dawn and considered one of the three \"pillars\" for the game's foundation. [ 66 ] Aloy's name has numerous applicable meanings: It could be a reference to the 1895 book The Time Machine by H.G. Wells where the main character of the novel travels forward in time, meeting an advanced species of humans known as the Eloi. The names Aloy and Rost recall common phrases like \"alloy and rust\", metal being an important theme in the games. 'Aloy' is a shortened form of 'Aloysio'\u00a0and 'Aloysius', both of which are derived from Old High German and, coincidentally, mean \"Great warrior\". A fitting description of Aloy's character. Aloy ended up being the child Sobeck always wanted, as she told GAIA that she would have liked to have a daughter who was curious, willful, and compassionate. How Aloy fits into the story bears some striking parallels with Pandora from God of War 3, another PlayStation exclusive series. Both are women of unnatural birth and specifically exist for an ominous purpose, with their very being acting as key to a source of power. The world they live in exists as the result of a system that was meant to rebuild from a catastrophic event (Olympus from Titanomachy, Zero Dawn from Faro Plague). However, both systems eventually fell into mass chaos. Both were guided by a man who lost their family and sought vengeance (Kratos, Rost). However, the only difference here is unlike with Rost, Kratos initially only saw Pandora as a tool to help exact his revenge on the Olympian gods, while Rost deeply cared for Aloy from her birth to adulthood and seemed very protective of her when she was young (which makes him similar to Hephaestus in that regard, who was also very protective of Pandora). Coincidentally, both had a daughter of their own and a distinctive mark on their faces. Curiously enough, the number of mysterious killers Rost went after was 12, which is also the number of Olympians in Greek mythology. Aloy's DNA is exactly 99.47% identical to that of Elisabet Sobeck. [ 12 ] Given that even identical twins do not 100% match for various reasons, such as imperfect cell replication and various environmental factors and life events causing epigenetic changes, the 0.53% difference between them is an understandable divergence. Despite this, some fans have theorised that the difference is due to GAIA augmenting Aloy's genetics as much as she could to give her an advantage in life, whilst keeping her still recognised as Elisabet by Identiscans. However, this is unlikely due to the lack of any evidence of this happening within ELEUTHIA during Aloy's conception and gestation, [ 3 ] [ 4 ] as well as Patrick Brochard-Klein 's insistence that ELEUTHIA only preserve genetic information, not alter it. [ 67 ] Aloy's name had been present since the beginning of Horizon Zero Dawn 's development. At some point, other names were considered, with Ben McCaw suggesting \"Aera\" which he liked because it implied the passage of time, although these were dropped and Aloy's name remained unchanged. [ 68 ]"
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 0.0,
+        "F1_Score": 0.0,
+        "Cosine Similarity": 0.8033723831176758,
+        "Answer Relevancy": 0.5866602659225464
+    },
+    {
+        "Question": "What is the Proving in Horizon Zero Dawn?",
+        "Answer": "The Proving is a Nora coming-of-age ritual and warrior trial. Those who succeed are recognized as Braves and granted a place within the tribe. Aloy participates in the Proving to earn acceptance, but the event is disrupted by a cult attack.",
+        "relevant": [
+            {
+                "a28a64cb-6006-5000-86dc-cd71eebb69a6": "Simulation Results is a datapoint in Horizon Zero Dawn . It is the twenty-fifth item in Text Datapoints - Quests .\nThis datapoint is located in the Zero Dawn Project Facility on the second floor below ground above the entrance on the map, near the HEPHAESTUS hologram."
+            },
+            {
+                "a16ff0bd-d56c-52f4-9bcc-e85a2b15b99c": "Horizon Zero Dawn: The Board Game is an Horizon Zero Dawn -themed board game."
+            },
+            {
+                "de1c0013-b3a0-5825-9c97-5d75186216ff": "The Grave-Hoard is the fifteenth main quest in Horizon Zero Dawn .\nStill no closer to understanding her connection to Elisabet Sobeck nor why the Eclipse specifically targeted her at the Proving , Aloy travels to the Grave-Hoard , the ruins of U.S. Robot Command in the eastern mountains to find more answers.\nAs Aloy nears the ruins , she sees a number of Eclipse agents and Corrupted machines . Killing them and descending into the bunker, the first room reveals that it was a site where the Old Ones faced off against hordes of Faro robots. Logs from the soldiers preserved as datapoints detail a number of battles that the Old Ones fought against the robots as well as the increasing hopelessness of the situation. Restoring power to a bunker door, Aloy continues deeper into the ruins. After taking out a room of machines and cultists, Aloy finds a room that shows her a map of the Earth, demonstrating the progression of the robots. Making her way outside, she finds the cultists tinkering with the skeleton of a Metal Devil , causing a Deathbringer to be released from the machine and brought to life.\nUpon defeating the enemies, Aloy enters another room to find that Project Zero Dawn was successfully completed but only through the aid of a simultaneous war plan, Operation: Enduring Victory , which bought time for Zero Dawn to be finalized.\nUpon climbing back to the surface via an elevator shaft, Aloy concludes that she needs to find the Orbital Launch Base that the Old Ones mentioned in the datapoint. Sylens informs her that it lies in ruins beneath the Citadel , the palace at the Shadow Carja capital, Sunfall . Understanding that it will be too dangerous to enter the city as any Eclipse agents wearing Focuses will be able to identify her, Aloy suggests crashing the network to disable their communications with each other and HADES . Through Sylens' instructions, Aloy makes her way back to the Sundom .\nGo to The Grave-Hoard Explore the Grave-Hoard Examine the Door Restore Power to the Ancient Door so you can go deeper in to the Grave-Hoard. Continue exploring the Grave-Hoard Kill the Eclipse in the Armory Continue exploring the Grave-Hoard Use the Console Continue exploring the Grave-Hoard Kill the Deathbringer and the Eclipse troops Search the War Room for information about Project: Zero Dawn, Elisabet Sobeck's plan to defeat the robot plague. Climb up the Escape Elevator\nThe following datapoints can be found inside the ruins during this quest, but are not required to collect during the quest. The player can return at any time if they are missed.\nA power cell can be found here after restoring power to a locked bunker door.\nA stranded necklace can be found inside the entrance, to the left of the Operation: Enduring Victory sign on a dead soldier."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.8915910720825195,
+        "Answer Relevancy": 0.6135745763778686
+    },
+    {
+        "Question": "Which tribe controls the desert regions in Horizon Zero Dawn?",
+        "Answer": "The Carja tribe controls the desert region known as the Sundom. They are known for their Sun-worshipping religion and political history, including the Red Raids carried out by the previous Sun-King Jiran.",
+        "relevant": [
+            {
+                "f6bd49a2-a306-5ec8-8b86-ec6b1726ada6": "The Tenakth are a human tribe in Horizon Zero Dawn and Horizon Forbidden West . They are the westernmost tribe on the North American continent, inhabiting and controlling the Clan Lands located within the Forbidden West . [ 1 ] A tribe divided into three clans, the Tenakth have spent much of their history warring amongst themselves, having only achieved peace and unity within the last two decades, and are mostly viewed by the other tribes as bloodthirsty and aggressive."
+            },
+            {
+                "4bf05afb-21cd-50ab-bcb9-e857f5bd223d": "The Banuk are a human tribe in Horizon Zero Dawn ."
+            },
+            {
+                "66144fcf-7c3d-5da7-a3fb-2dc4a36bde60": "After the Zero Dawn protocol went into effect and new humans were released from ELEUTHIA-9 , spreading across the land and forming into separate tribes, one group found the Mojave Battlefield Memorial Museum, which became known as the Memorial Grove . Its holographic \"visions\" inspired them to establish themselves as the three clans of the Tenakth tribe, with each clan basing their way of life on specific holographic presentations depicting JTF-10 conflicts on the desert of the Mojave, the mountains of Sierra Nevada, and the forest to the west. The conflicts depicted in the visions resonated with the Tenakth, who also battled machines and fought for their survival. They also became especially fascinated with the depictions of JTF-10's aircraft and aerial maneuvers, referring to the fighter planes as \"The Wings of the Ten\" and seeking to emulate JTF-10 by leaping into combat from above."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 0.0,
+        "F1_Score": 0.0,
+        "Cosine Similarity": 0.7414343953132629,
+        "Answer Relevancy": 0.646556043624878
+    },
+    {
+        "Question": "What is the name of the city ruled by the Sun-King Avad?",
+        "Answer": "The capital city ruled by Sun-King Avad is Meridian. It is the largest and most advanced city in the game, a hub of trade and diplomacy.",
+        "relevant": [
+            {
+                "a9a4397a-3c62-5016-bd28-1302cb819aed": "The Palace of the Sun is an unmarked location in Horizon Zero Dawn . A grand palace located on the outskirts of Meridian , it serves as the residence for the Sun-King .\nThe Palace of the Sun is located directly outside Meridian, reachable by a heavily guarded bridge. Meridian's aqueduct flows through the palace, providing irrigation to the city and village below.\nThe architecture of the palace follows the style of Meridian: ornate sandstone walls with copper fixtures. Near the center of the palace is a balcony overlooking Meridian, adorned with blue tapestry. The balcony appears to be the throne area for the Sun-King, and many nobles will wait in line to ask favors of him. Behind this balcony is a shaded living room area, filled with comfortable furniture and lavish decorations.\nThe interior of the palace is mostly unexplored, as it is off-limits to the Nora Aloy .\nIt is not clear when the palace was constructed, but by the reign of Sun-King Jiran , it had become the primary residence for the reigning Sun-King.\nIt was from the palace that Jiran watched the Liberation unfold, eventually ordering his champion Helis to smuggle his heir Itamen and wife Nasadi to Sunfall when it had become clear the battle was lost.\nAvad's forces reached the palace through Meridian's aqueducts, but it was Avad alone who confronted Jiran in his solarium. When Jiran refused to answer honorably for his crimes, Avad reluctantly slew his father, ending the Red Raids . Despite his disapproval of the palace, Avad took residence in the palace like his father before him.\nIn Dervahl 's attempt to destroy Meridian and murder Avad, he infiltrated the palace by scaling a nearby cliffside, allowing him to climb to the aqueducts. While he was able to subdue the Sun-King and his guards with a sonic weapon, he failed to accomplish what he set out to do, and was defeated by Aloy.\nAloy would meet Avad at the Palace again to warn him of the Eclipse 's impeding attack.\n#1 The Sun-Kings #6 Founding Of Meridian"
+            },
+            {
+                "44ac6da6-6641-5558-8d03-07a908b747af": "After the defeat of the Eclipse in the Battle of the Alight , Sun-King Avad extended an offer of amnesty to the commoners of the Shadow Carja, who subsequently rose up against what little remained of their oppressors and surrendered Sunfall to the Carja military. The remainder of the Rustwash was subsequently reclaimed by the Carja."
+            },
+            {
+                "b79f0a5b-42eb-5d63-aac4-d4f862abfbb7": "Following the disappearance of Sun-King Iriv in the west, his successor Sun-King Basadid ordered the construction of a fortress later named Sunfall atop the Zero Dawn Project Facility, believing that the location was seized by the Old Ones for its strategical value. Much of the ruins were either collapsed or built over to build the fortress, being named Sunfall . This damage has led much of the facility unable to function correctly, doors unable to open, and stairwells impassable. [ 4 ]"
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.8622102737426758,
+        "Answer Relevancy": 0.6193643450737
+    },
+    {
+        "Question": "Who is Sylens, and what role does he play in the story?",
+        "Answer": "Sylens is a mysterious and highly intelligent figure who discovers Focus technology long before Aloy. He helps Aloy uncover the truth about HADES but has his own motives, often walking a fine line between ally and antagonist.",
+        "relevant": [
+            {
+                "8d962684-eaf5-525e-937e-32d78bd32c05": "Sylens' Workshop is an unmarked location in Horizon Zero Dawn . The workshop was originally part of the GAIA Prime facility.\nSometime after the destruction of GAIA Prime, Sylens made his way into the facility, eventually setting up a workshop in one of the exterior rooms. While he attempted numerous times to venture further, the security of the facility rendered his efforts fruitless. Based on the datapoints inside the workshop, Sylens likely took refuge here after being betrayed by HADES .\nAloy passes through the workshop when she visits the ruins to retrieve the Master Override . Sylens is waiting for her on the way out and confesses his degree of involvement with the Eclipse . He also provides her with a lance for inserting the Master Override into HADES. At the end of their discussion, Sylens and Aloy part ways, seemingly for the final time.\n#60 First Meeting #61 Buried Shadow #62 Intercepted Transmission"
+            },
+            {
+                "c3b9fe86-c736-5161-ab0f-73435d72c1a8": "However, this plot would not go unopposed. Sylens, who had been betrayed by HADES upon outliving his usefulness, [ 3 ] would come to work with Aloy , the clone of Elisabet Sobeck created by GAIA to restore her. As the two unraveled the mysteries of Project Zero Dawn and HADES, Sylens deduced HADES' objective. Once Aloy received GAIA's Master Override , Sylens relayed his conclusion to Aloy, and provided her with a lance she could use to apply the Master Override to HADES. [ 4 ]"
+            },
+            {
+                "2e2aed33-f29d-5497-890f-a0c0859506e3": "Once they were away from Sunfall, Sylens give Aloy a new Focus, with a copy of the contents of her old one, including the Alpha Registry. Sylens chooses not to help Aloy warn the Nora of the impending Eclipse attack, but he does apologize for being rude to her in the Zero Dawn Project Facility . He rides off, and Aloy heads in the direction of the Sacred Lands. [ 24 ]"
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.8964312076568604,
+        "Answer Relevancy": 0.5132876753807067
+    },
+    {
+        "Question": "What are Corruptors, and what makes them dangerous?",
+        "Answer": "Corruptors are small, spider-like war machines from the Old World. They are dangerous because they can override and corrupt other machines, turning them hostile, and they are equipped with powerful weapons.",
+        "relevant": [
+            {
+                "359bbeda-685b-53aa-8200-9d684be03783": "Corruptors are extremely fast and nimble. They employ a variety of ranged and melee attacks, including a melee attack in which they execute a crushing leap onto the enemy. A Corruptor is capable of utilizing its electronic warfare capability to control other machines and make them fight alongside it, quickly plunging an enemy into a fight against overwhelming odds."
+            },
+            {
+                "97d17840-39dd-5170-aea3-04183b9bf52c": "Corruptors have two significant weakness: due to centuries of being buried, they are particularly vulnerable to weapons that utilize fire, and they are prone to overheating. When they overheat, they expose a cooling rod. Ranged attacks that hit this component inflict significant damage to the Corruptor."
+            },
+            {
+                "8d7bb13e-4b75-544b-a2b4-2ab114051d71": "Corruptors have two significant weakness: due to centuries of being buried, they are particularly vulnerable to weapons that utilize fire, and they are prone to overheating. When they overheat, they expose a cooling rod. Ranged attacks that hit this component inflict significant damage to the Corruptor."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.7893726229667664,
+        "Answer Relevancy": 0.599099588394165
+    },
+    {
+        "Question": "Which machine is known for resembling a saber-tooth cat?",
+        "Answer": "The Sawtooth is a large machine that resembles a saber-tooth cat. It is one of the first dangerous machines Aloy faces in Horizon Zero Dawn, known for its aggression and powerful melee attacks.",
+        "relevant": [
+            {
+                "b0c4aa18-6772-568d-b755-7c14edcc1ee2": "HEPHAESTUS appears to have modeled the Sawtooth after Smilodon fatalis , an extinct feline apex predator of the Pleistocene epoch , commonly called the saber-toothed cat. Like the saber-toothed cat, it is heavyset at the front, with a large, broad chest, neck, and shoulders, powerful legs, and no tail. Its mouth is equipped with a pair of curved, scimitar-like serrated spikes, like a saber-toothed cat's fangs. Two optical sensor arrays are located on its face, in the same position as a saber-toothed cat\u2019s eyes. Each is composed of two sensors in a vertical configuration. A long, metal crest-like structure runs along the forward area of its back, and an array of three long antenna-like structures protrude from its back in a fan-like pattern, just behind the shoulders. Its paws are equipped with non-retractable claws. The shoulders, head, and neck are heavily armored. A power cell sits atop its hindquarters, and a canister of Blaze is ensconced in its chest."
+            },
+            {
+                "adf1e4dc-a78a-5480-bb67-ef4bed7b2e21": "The Clamberjaw is a small simian machine that resembles a tailed baboon. It possesses a mask-like component that is capable of covering its face. It has two small air sacs on the sides of its face. The body is covered with armor plating with claw-like hands and feet that allow it to hang onto trees. There is a storage canister on its chest and two Power Cells on its back. On its hind legs are two Blaze sacs, which it uses for defense. The machine has a long, slender tail with a spraying mechanism."
+            },
+            {
+                "b9f75115-71e4-5889-8be7-77de410a40bd": "Stormbirds are raptorial in appearance. Indeed, while machines generally resemble some form of pre- Zero Day animal life, the Stormbird's appearance does so more than many other known machines. Its resemblance to a bird of prey is unmistakable, with raptorial wings, tail, head and beak, armor plating that resembles feathers, and taloned feet. It has two optical sensor arrays positioned in the same place as the eyes of an eagle or falcon. Above each shoulder is an armored Chillwater canister. Each wing is equipped with three feather-shaped jet engines. The wings are equipped with winglets, enhancing their aerodynamic efficiency. An armored Blaze canister is positioned above each hip. Each of the four toes on each foot is equipped with a talon. In the center of the chest is an armored electrical energy projectile weapon known as a lighting gun, with which it can fire powerful blasts of electrical energy, similar to a Shell-Walker ."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.8995823860168457,
+        "Answer Relevancy": 0.6278119285901388
+    },
+    {
+        "Question": "What is the main function of the subroutine AETHER?",
+        "Answer": "AETHER is one of GAIA's subfunctions responsible for cleansing and regulating the atmosphere. It removes toxic gases and restores air quality after the Faro Plague devastated the environment.",
+        "relevant": [
+            {
+                "214eb9d9-8a5f-54ce-a92d-0e29a09768e9": "A hologram of an early Stormbird was used during Elisabet 's presentation of Project Zero Dawn , showing how the HEPHAESTUS and AETHER sub-functions worked. [ 1 ]"
+            },
+            {
+                "0649ebd6-d8b3-5800-8799-6866d3a8e175": "Override Subroutines is a learnable Machine Master skill in Horizon Forbidden West .\nUnlocking this skill enables Aloy to choose between two different modes when overriding a machine : Aggressive or Defensive. Defensive is the default behavior (with or without the skill) and the machine will stay close and protect Aloy. They will not attack unless an enemy is alerted and will typically focus on the same target as Aloy. Aggressive behavior causes the machine to seek out and attack any enemy it can detect."
+            },
+            {
+                "6bcba4dd-17bd-57c2-a2cc-9696585b8e9e": "The Stormbirds were one of the first designs created by the artificial intelligence GAIA as one of the Zero Dawn terraforming machines, designed to work under AETHER to help with atmosphere restoration. [ 1 ]"
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.8475971221923828,
+        "Answer Relevancy": 0.6156171441078186
+    },
+    {
+        "Question": "What major new region does Aloy explore in Horizon Forbidden West?",
+        "Answer": "In Horizon Forbidden West, Aloy travels into the Forbidden West, a vast post-apocalyptic region covering parts of Utah, Nevada, and California. The area is home to new tribes, dangerous machines, and Old World ruins.",
+        "relevant": [
+            {
+                "2c8c721b-f102-5e42-b285-75249266d206": "Horizon Forbidden West continues the story of Aloy half a year after the events of the Zero Dawn , a young huntress of the Nora tribe sent on a quest to a mysterious frontier spanning Utah to the Pacific coast to find the source of a mysterious plague that kills all it infects. On her journey across the uncharted lands of the Forbidden West , she encounters hostile regions filled with natural threats and ravaged by massive storms , dangerous enemies and deadly machines, both new and old. As Aloy attempts to explore the wider and deeper parts of the Forbidden West, she discovers a vast array of diverse environmental ecosystems, including lush valleys, dry deserts, snowy mountains, tropical beaches and ruined cities, both above and below the water. [ 4 ]"
+            },
+            {
+                "c70633ff-74d8-5939-8c6c-e440de3c0761": "Set in an open world of post-apocalyptic California , Utah and Nevada , the game explores the setting of a mysterious location known as the Forbidden West, which, throughout the majority of Horizon Zero Dawn , was hinted as being extremely savage and dangerous."
+            },
+            {
+                "d2a1cc52-2928-5afc-9e1f-0a3a900ef662": "The Forbidden West is the Carja name given to the land west of the Daunt . This uncharted region is known for its mystery and danger, as few people who venture there have ever returned in one piece. It is a mentioned-only location in Horizon Zero Dawn and the primary location of Horizon Forbidden West ."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.9434477090835571,
+        "Answer Relevancy": 0.6948115110397339
+    },
+    {
+        "Question": "What is the name of the Tenakth capital city?",
+        "Answer": "The capital of the Tenakth tribe is Memorial Grove, a city built around Old World ruins that serves as their cultural and political center.",
+        "relevant": [
+            {
+                "8bf0e330-0697-5c1c-b787-288709b8add6": "The Bulwark is a Tenakth settlement in Horizon Forbidden West , and the capital of the Sky Clan .\nThe Bulwark's namesake is a pile of massive boulders adorned with Sky Clan markings. A rudimentary elevator controls easy access to the top. Watchtowers flank either side of the wall.\nWithin the Bulwark itself, the Tenakth structures consist of little more than sheds built into the mountainside. The commander's room, however, is much larger, and sits on a jutting rock overlooking the settlement. Behind this room is a path leading into the larger Sheerside Mountains . Stone roads encircle the center of the settlement, which is occupied by a melee pit where Tenakth soldiers train.\nSeveral merchants can be found in the Bulwark, each offering unique services, including hunters, stitchers, cooks , dyers , herbalists, and painters.\nThe area where the Bulwark would later be is what the Old Ones called Sentinel Dome in California . The Bulwark was formed during Operation: Enduring Victory , the result of an airstrike covering the retreat of a column of troops as they retreated from the machines of the Faro Plague . The rear end of the column was caught underneath the rubble that resulted from the strike, forming the imposing stone wall from which the settlement gets its name. [ 1 ] [ 2 ]\nSometime after the foundation of the Tenakth, the Sky Clan claimed the Bulwark as their clan capital.\nEvidently, the Bulwark thwarted a number of sieges during the Clan Wars , earning it a legendary status as an impregnable fort. [ 3 ] [ 4 ]\nThe Bulwark was one of the many locations visited and documented by Marshal Fashav during his travels through the Clan Lands . [ 5 ]\nThe area immediately around the Bulwark was used extensively by Regalla's rebels to herd overridden machines to their camps.\nBelieving himself safe behind the Bulwark, [ 3 ] the Sky Clan's Commander Tekotteh refused to ally with Chief Hekarro against the rebels and send representatives to the embassy [ 6 ] or contestants for the Kulrut . [ 7 ] When he told Aloy and Kotallo that the he would not send contestants so long as the Sky Clan is safe behind the Bulwark, they exploited a weakness in the wall to destroy a portion of the Bulwark, forcing Tekotteh to keep to his word and sent the Sky Clan representatives to the Kulrut. [ 8 ]\n#13 Did We Just Bomb Yosemite?\n#34 The Bulwark\nVirakk\nEzekko ; deceased\nThe flanking roads and jutting rock in the center of the Bulwark are very similar to the city of Minas Tirith from The Lord of the Rings ."
+            },
+            {
+                "3c4a5ab1-c969-5a52-bcf7-487be2ced9cf": "The central part of the clan lands features the Memorial Grove which is the capital of the Tenakth clan including The Arena , where Tenakth warriors can fight against machines."
+            },
+            {
+                "eb0f6da3-d35e-53de-a8b6-a7339454f4e0": "Scalding Spear is a Desert Tenakth settlement located at the southern edge of the tribe 's territory, the Clan Lands , in Horizon Forbidden West . The settlement is the capital of the Desert Tenakth, and one of the clan's larger settlements.\nThe settlement's namesake is constructed atop an Old World solar power tower. It is encircled by a field of hundreds of long-defunct solar panels, which the Tenakth compare to gravestones.\nScalding Spear hosts the Desert Clan's only source of drinkable water: a well dubbed the Wound in the Sand.  Smaller villages throughout the area trade food and supplies in exchange for their water supply.\nAs a clan capital, Scalding Spear hosts a Melee Pit for training. Among the capital's occupants are the clan commander and a variety of specialty merchants, including an inker and dyer.\n#29 Scalding Spear\n#34 Return of the Flies #35 A Load Off\nScalding Spear's built upon what the Old Ones called the Southwestern Solar, which is most likely a secondary location to the Crescent Dunes Solar Energy Project in Tonopah, Nevada. [ 1 ] However, the latitude and longitude given in the State of Play countdown trailer erroneously corresponds with the city of Denair . [ 2 ]"
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.8856093883514404,
+        "Answer Relevancy": 0.6629140496253967
+    },
+    {
+        "Question": "Which tribe in Forbidden West reveres the machines as gods and worships them?",
+        "Answer": "The Utaru tribe, who live in Plainsong, worship machines as gods. They believe the land and the machines are spiritually connected, and they integrate music and farming into their daily lives.",
+        "relevant": [
+            {
+                "00191a74-87fd-5eac-9a07-0dee77b5c8f9": "Devotees are a non-tribal faction in Horizon Forbidden West: Burning Shores .\nThey are Quen followers of Walter Londra 's cult. Walter, presenting himself a Living Ancestor and sole survivor of the Time of Ashes, recruited them into a cult. Taking advantage of the Quen's beliefs, Londra promised to take them to start a colony on another planet to escape a dying Earth, this divine plan was named the Ascension. These devotees would stay in Walter's bunker, Heaven's Rest , where they would worship him. Followers would have to forget other Ancestors and The Legacy , leaving everything behind to embrace Walter. Seyka's sister, Kina , was indoctrinated into the cult, which is a major driving force for Seyka to defeat Walter.\nTo enter the Ascension Hall, a follower must pass the Devotion Review by reciting the Words of Attainment.\nLittle did the Devotee followers know that Walter only planned to take a select few to form his \"retinue\" and to clone genetic material (Hair and nail clippings) extracted from the Quen, after which he would've brainwashed them into his service. In addition, Walter decided to have Quen 'audition' to be his mate by acting out the most famous scene in his ex-wife's holo career. If none were a favorable candidate, Walter would simply pick another Devotee from future generations. [ 1 ]\nWalter was successful with brainwashing some Devotees using Mutiny Suppression Protocol, turning the cult members aggressive. They acted as guards in Pangea Park and other excavation sites.\nAfter the quest The Stars in Their Eyes , obsessed and frenzied [ 2 ] Devotees seek revenge against Aloy, setting up Devotee Outposts .\nDevotee Champion Devotee Guard Devotee Lieutenant Devotee Marine Devotee Ranger Former Devotee Quen Devotee\nBrenik Fedder Jeel Kina Kiral Otosu Lan Peera Valea Zeth"
+            },
+            {
+                "d7c82a9b-6623-5747-bc9e-f50089b436bc": "Fane is a character in Horizon Forbidden West . He is a member of the Utaru tribe 's leadership body, the Chorus ."
+            },
+            {
+                "39052697-8dd1-5567-a96d-a9ac4190593d": "Zo holds many of her Utaru traditions dear, including vegetarianism, [ 7 ] botany, music, reverence of the land-gods, and remaining connected to the earth and cycle of life. While her discovery of the terraforming system and GAIA initially caused her great turmoil, she was ultimately able to remedy her newfound discoveries with her culture and ideology."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.8490275144577026,
+        "Answer Relevancy": 0.63647301197052
+    },
+    {
+        "Question": "Who are the Zeniths, and why are they significant in Forbidden West?",
+        "Answer": "The Zeniths are members of the Far Zenith colony, an elite group of Old World humans who escaped Earth before the Faro Plague. Using advanced technology, they achieved virtual immortality and return in Forbidden West to reclaim Earth.",
+        "relevant": [
+            {
+                "a8b89e83-32f3-50cc-b573-a413a29487cd": "At Gerard's order, the Zeniths constructed a base on Earth on an island off the coast of the Tenakth Clan Lands . As it was constructed in close proximity to the Valley of the Fallen , Erik ordered the Zenith AI, Julius , to manage the machine lures to draw Zero Dawn machines to kill any nearby Tenakth; personally, Erik wanted to handle the base security himself but Gerard reminded him to remain focused on their mission. [ 3 ]"
+            },
+            {
+                "ae589238-f92d-5228-bfbc-3a1a4fcce84d": "Before departing for Far Zenith Base , Aloy spoke to Alva and Kotallo alone, entrusting them with a plan to take out the base's regulator as well as hack the Zenith database to determine what, if anything, Tilda was hiding from the group. Once at the base, Alva and Kotallo successfully destroyed the regulator while Aloy and the rest fought the Zenith's outside, Alva managed to get into a terminal and access Far Zenith's records. Out of all the data she found, two things caught her interest: first of all, she discovered flight plans for spaceflight away from Earth, indicating that Zeniths weren't attempting to recreate Earth's biosphere for their purpose, but rather flee Earth with GAIA. Second, she found mentions of something called \" Nemesis \". The data didn't reveal what it actually was, but Alva determined that the Zeniths feared it. Aloy and Beta eventually learned from Tilda, what Nemesis actually is. [ 12 ]"
+            },
+            {
+                "5ca3f63c-6663-5934-9a41-1efba7ee2c36": "Erik Visser is a major antagonist in Horizon Forbidden West , and a mentioned only character in Horizon Forbidden West: Burning Shores . He served as the enforcer of Far Zenith , and the right-hand man of Gerard Bieri ."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.926443338394165,
+        "Answer Relevancy": 0.6193758487701416
+    },
+    {
+        "Question": "What unique ability does Aloy gain with the Shieldwing?",
+        "Answer": "The Shieldwing is a glider-like device that allows Aloy to descend safely from heights. It gives her new traversal abilities and is critical for exploration and combat maneuvers in Forbidden West.",
+        "relevant": [
+            {
+                "cca93ce3-08db-58e8-a6ec-321151fc3760": "As the garrison at Barren Light tended to the dead, Aloy helped the injured Varl back to the garrison to rest. The next morning, she retrieved Grudda's Shieldwing from his corpse and spoke with Barren Light's new commander, Lawan , before journeying into the Forbidden West alone. [ 38 ]"
+            },
+            {
+                "852b8225-2e51-5aa0-a49e-cd5d4bc69905": "https://en.wikipedia.org/wiki/Aloy"
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.905472457408905,
+        "Answer Relevancy": 0.7289467334747315
+    },
+    {
+        "Question": "Which machine in Forbidden West is modeled after a snake?",
+        "Answer": "The Slitherfang is a massive serpent-like machine introduced in Forbidden West. It is highly dangerous, capable of spitting acid, unleashing electrical attacks, and wrapping around its enemies.",
+        "relevant": [
+            {
+                "2d4d4294-171b-5198-b0d9-eacb14ff3a6a": "The Slitherfang is a large serpentine machine with traits of both a cobra and a rattlesnake. Its head is similar to a cobra, a pair of tri-ocular sensors on a head with two extendable metal fangs. The \"sonic hood\" on its head resembles a cobra's frills and can extend them to use as sound blasters. it has a pair of earth-grinding drills on its front, including three big, detachable spinners. It has a sac on the throat and a sac on the back that can change between Metalbite and Purgewater . The data nexus of the Slitherfang is at the back of the neck. Its body is composed of multiple segments that can freely spin, allowing it to move like a snake. The end of the tail consists of three shock units that charge by the Slitherfang shaking it like a rattlesnake, and then snapping them into place for electric attacks."
+            },
+            {
+                "32f7e757-6bae-58d3-8d2e-710b5dc383ef": "The Slitherfang is a machine in Horizon Forbidden West ."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.8617857694625854,
+        "Answer Relevancy": 0.5868139863014221
+    },
+    {
+        "Question": "What are Sunwings, and what role do they play in Forbidden West?",
+        "Answer": "Sunwings are flying machines powered by solar energy. In Forbidden West, Aloy can override them, giving her the ability to fly across the world for the first time.",
+        "relevant": [
+            {
+                "a07f323d-a09b-566c-ab2c-bd15c7da8c73": "The Sunwing Circulator is an uncommon machine resource in Horizon Forbidden West .\nSunwing Circulators can be obtained by looting Sunwings (50% chance) , or by purchasing them from Handa or Runda for 78.\nSunwing Circulators can be sold for 20."
+            },
+            {
+                "a102d909-a3dd-5548-bd9c-6c14059e8529": "Sun Wings is an uncommon Carja food in Horizon Forbidden West and The Official Horizon Cookbook: Tastes of the Seven Tribes .\nMilduf notes that every Carja customer he had at the tavern in Chainscrape ordered Sun Wings, but he didn't know the recipe. Much later on, during his time in Meridian , he learned how to prepare them from the cooks in Avad 's royal kitchen. [ 1 ]\nSun Wings can be purchased from the Cook at Barren Light for 1 Rich Meat , 3 Eastern Bird Wings and 15.\nConsuming Sun Wings boosts Aloy 's Critical Strike+ skill by 3 Levels for 3 minutes. Additionally, it restores 25% of her Health and Stamina. They can also be sold for 5 Metal Shards .\nDespite being called Sun Wings and being made with chicken wing meat in The Official Horizon Cookbook , [ 1 ] the icon for Sun Wings in Horizon Forbidden West appears to represent bird legs, not wings."
+            },
+            {
+                "78233712-be66-57ef-b97e-40e62767d65e": "The Shieldwing is a tool in Horizon Forbidden West which allows Aloy to safely descend from great heights, while also granting her the ability to stealthily surprise enemies from above. [ 1 ]\nThe Shieldwing was harvested from the Tenakth rebel Grudda after Aloy bested him in single combat. While it was too damaged to use as a shield, its gliding functionality remained intact.\nWhen activated, the Shieldwing behaves like a parasail, allowing Aloy to safely descend from any height. This comes with the added benefit of improving stealth capabilities, allowing for surprise attacks from above.\nThe Shieldwing was originally intended to be implemented in Horizon Zero Dawn . [ 2 ]"
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.910712718963623,
+        "Answer Relevancy": 0.6514891386032104
+    },
+    {
+        "Question": "Who is Regalla, and why does she oppose the Tenakth leadership?",
+        "Answer": "Regalla is a rebel Tenakth warlord who opposes Chief Hekarro's leadership. She leads a faction of Tenakth rebels and allies with Far Zenith technology to challenge the established order.",
+        "relevant": [
+            {
+                "77837ac9-a976-5259-95f0-07809093d681": "There are many Tenakth who are unable and unwilling to forgive the Carja for the atrocities committed during the Red Raids . Among those Tenakth was Regalla, who was once the greatest Marshal of the Tenakth's Chief Hekarro . When Hekarro accepted the Carja's reconciliation efforts, she deemed him a traitor and challenged him for leadership of the tribe. Hekarro triumphed, but gave Regalla mercy rather than death due to her past service."
+            },
+            {
+                "362c2847-78eb-5a1a-be86-0bb607e510b5": "Regalla is a major antagonist in Horizon Forbidden West . She was the chief of the Tenakth rebels ."
+            },
+            {
+                "ec35508b-c210-5a92-a73f-efbfb7b4c90c": "Tatai is a minor character in Horizon Zero Dawn: The Frozen Wilds .\nTatai was previously a member of a werak in Ban-Ur , but she fled alongside Urkai and Tulemak after a dispute with the chieftain, Onnekut. Led by an egotistical and power-hungry chieftain, the werak had become divided into those willing to follow him with false support and those who refused to submit to his leadership. Of those who opposed him, Tatai called for a new chieftain and her mentor, Nukoni, challenged Onnekut for control of the werak. Despite Nukoni's superior hunting skills, Onnekut returned as the victor. Suspicious of the circumstances, Tatai, Urkai and Tulemak investigated only to find that Nukoni was murdered. It is strongly implied that Onnekut was responsible.\nGathering their belongings, they left the werak and Ban-Ur for the Cut where they encountered Burgrend . Burgrend agreed to stock them with supplies for their journey to the Sundom , however, only with Aloy's assistance in scavenging the required machine parts were they able to repay him.\nUpon agreeing on a name for their werak, dependent on Aloy's response to a flashpoint , Tatai headed for the Sundom to meet with Ohtur and learn how to harvest machines.\nTatai is hot-headed and sharp-tongued. She is abrasive to Aloy and resistant to her assistance, although she does come to accept the Nora 's help. Of the three hunters, Tatai seems to be the most affected by Nukoni's death, admitting that the memory of finding her dead body is sometimes all she can think of.\nTatai and Urkai have the tendency to squabble with one another.\nThe Hunters Three\nWhile searching for a name for their new werak, Tatai unsuccessfully recommends \"The Bloody Snowdrifts.\" In combat, Tatai uses Shock Arrows. While this largely ineffective given the Daemonic enemies during the quest, she can still set off the power cells on the Longlegs and Scrappers ."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 0.0,
+        "F1_Score": 0.0,
+        "Cosine Similarity": 0.9082561731338501,
+        "Answer Relevancy": 0.6631291270256042
+    },
+    {
+        "Question": "Which AI subfunction is responsible for creating new machines?",
+        "Answer": "HEPHAESTUS is GAIA's subfunction responsible for designing and building machines. It adapts machine designs to counter human threats and resists Aloy's attempts to reintegrate it into GAIA.",
+        "relevant": [
+            {
+                "d7cfa61e-a351-58d3-8b14-c0fc923823e3": "While unconfirmed, it is possible that HEPHAESTUS created the Daemonic Machines in response to HADES corrupting and taking control of normal machines. Because of their increased combat ability, as well as their purple wires, it can be inferred that Apex Machines are a sort of successor to Daemonic Machines."
+            },
+            {
+                "7ab34558-c1f1-57e9-bff3-6f96f633499a": "Daemonic machines are machines that have been augmented by the artificial intelligence HEPHAESTUS . These machines are unique to the Banuk region known as The Cut . They are much stronger, more aggressive and resistant to damage and elemental states than even Corrupted machines ."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.8045014142990112,
+        "Answer Relevancy": 0.6101730346679688
+    },
+    {
+        "Question": "What role does the subfunction MINERVA play in GAIA's restoration?",
+        "Answer": "MINERVA is the subfunction in charge of decrypting and transmitting signals to shut down the Faro Plague machines. Restoring MINERVA is one of Aloy's key objectives in rebuilding GAIA.",
+        "relevant": [
+            {
+                "12fcfe85-3135-54fd-a130-15585676427e": "The Eye of the Earth is the seventh main quest in Horizon Forbidden West .\nAfter purging HEPHAESTUS from the core of Repair-Bay TAU , Aloy and her allies venture into the facility connected to the Repair Bay. Upon seeing their presence, MINERVA locks down the facility. Aloy scouts ahead, eventually reaching the system core where MINERVA resides and convincing it to merge back with GAIA . With MINERVA's cooperation, Aloy activates the heuristic matrix and finally restores GAIA. GAIA initially believes her to be Dr. Elisabet Sobeck , but recognizes her as Aloy after scanning data on her Focus . She then grants access to Varl and Zo .\nWhile GAIA finishes initialization, Aloy explores the facility with Varl and Zo. GAIA explains it to be a Regional Control Center, intended for the early generations of new humans to oversee terraforming operations within the area.\nOnce GAIA's initialization is complete, she calls Aloy back to the control room to discuss matters with her. When she inquires about the mysterious strangers who attacked her at the HADES Proving Lab , GAIA reveals them to be linked to the source of the extinction signal that woke her subfunctions 20 years prior, which originated at a source 81 trillion kilometers away, the Sirius star system, the intended destination for the Odyssey . Aloy deduces that Far Zenith must have falsified the ship's destruction a thousand years ago for their own reasons, and their descendants are now back on Earth. GAIA manages to pinpoint the location of three of her subfunctions: AETHER , DEMETER , AND POSEIDON . HEPHAESTUS , while also revealed, poses a unique challenge. Unlike the other subfunctions, it's not confined to a single location, and at GAIA's current processing level, she's unable to absorb HEPHAESTUS until her own heuristic matrix had expanded enough through the acquisition of other subfunctions. With that, Aloy sets out to begin retrieval of the subfunctions, while Varl goes back east to find Erend and bring him to the Base . Zo decides to stay behind to familiarize herself with GAIA and the Old World.\nEnter the Facility Climb the Elevator Shaft Search the Facility for MINERVA Examine the Console Go to the Lab Examine the Fabrication Terminal Explore the Base (Optional) Return to the Control Room Talk to GAIA Exit the Base through the West Door\nThere is one datapoint automatically collected upon completion of this quest.\n#10 The Subordinate Functions\nCompleting this quest awards the trophy \"Established the Base\". In New Game+ , overrideable Sunwings become available once the western exit to the Base opens."
+            },
+            {
+                "29e926e1-0997-5df3-8347-11e304af6c6b": "Aloy manages to get inside (although she first has to construct an Igniter to clear the Firegleam growth on the door), and finds the facility heavily flooded. She manages to make her way to the inner gene-locked latch, where the backups are stored within a massive contraption called \"RECLUSE SPIDER\". Unfortunately, centuries of water damage have corroded all but two of the repository, both of which are void of the subordinate functions. After an initial moment of frustration, Aloy realizes that she could use the original subordinate functions to rebuild GAIA piece by piece. Using LATOPOLIS's scanner, she manages to locate MINERVA in the mountains west of Plainsong ."
+            },
+            {
+                "e81e4603-6887-540a-a3e4-49503b0243f6": "The central AI and its nine subfunctions are named after deities of Greek mythology (with the one exception being Minerva, a Roman deity), mirroring their task. Gaia, primordial, anthropomorphised personification of the Earth itself. Aether, primordial god and personification of air Apollo, god of prophecy, oracles, culture, music, medicine, poetry, and the transmission of knowledge. Artemis, goddess of hunting, and the wilds. Demeter, goddess of the earth and agriculture. Eleuthia, goddess of childbirth. Hades, god of the underworld and the dead. Hephaestus, god of the fire and forge. Minerva, goddess of wisdom, protector of civic life, ingenuity, and battle. Poseidon, god of the seas and earthquakes."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.880610466003418,
+        "Answer Relevancy": 0.6297652006149292
+    },
+    {
+        "Question": "What machine resembles a mammoth in Forbidden West?",
+        "Answer": "The Tremortusk is a mammoth-like machine equipped with heavy armor and powerful weaponry. It is used as a war machine by Regalla's rebels and presents a significant challenge in combat.",
+        "relevant": [
+            {
+                "f49f7db6-3f04-5625-984c-c37a821b35f9": "The Bristleback is a machine in Horizon Forbidden West ."
+            },
+            {
+                "3efb7f2d-1205-5e21-aafd-a4b966af4ead": "The Bristleback resembles a large warthog . The head of the machine is boar like, with a binocular array of eight optical sensors, two panels above the back of the head resembling ears, and two metallic protrusions at the front, resembling tusks, ahead of the mouth, which contains two circular saws as the machine\u2019s mouth. The back is lined with armor plating, save for one opening that serves as a place to mount the machine, and on its rear end is two elemental canisters, either with Blaze or Acid, depending on the variant. It appears to have elemental lines running under its belly, connecting to the canisters on its rear."
+            },
+            {
+                "491d1c9f-e755-5403-a5ef-0d7411a55793": "The Dreadwing is a machine in Horizon Forbidden West seemingly based on a vampire bat. It is a heavyweight combat machine that is capable of flight."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.8174260854721069,
+        "Answer Relevancy": 0.7080020189285279
+    },
+    {
+        "Question": "What is the name of the Oseram leader who helps Aloy with explosives and inventions?",
+        "Answer": "Erend Vanguardsman is the Oseram leader who becomes one of Aloy's closest allies. He provides support with Oseram technology, explosives, and his loyalty to Aloy's cause.",
+        "relevant": [
+            {
+                "cd03f414-648f-5989-83a6-6c8d2910de76": "When Aloy arrived in Free Heap, Petra hired her to clear out both a group of Scrappers and clan of bandits from the heap, as well as retrieve equipment necessary for finishing a prototype improvement on the Oseram Cannons. Aloy returned upon completion, but warned Petra that the bandits were planning to attack Free Heap in retaliation. Undeterred, Petra readied the Oseram Cannon with the retrieved parts, giving it to Aloy to ward off the bandits. To finish the bandits, Petra ordered the bridge shot down, burying the final bandits beneath it. Petra thanked Aloy for her help, promising not to forget her debt to the machine huntress. [ 2 ]"
+            },
+            {
+                "4b044145-dad7-5a6c-bfe2-fb53e67dac8b": "Morlund is a talented and optimistic showman, filled with boundless energy and love for his craft, often naming his inventions with adjectives emphasising their greatness. He initially bonds with Aloy over their shared enthusiasm for the diving mask."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.7535411715507507,
+        "Answer Relevancy": 0.6490916728973388
+    },
+    {
+        "Question": "Which character becomes a major ally of Aloy after she helps free Meridian from corruption?",
+        "Answer": "Sun-King Avad becomes one of Aloy's political allies after she helps defeat the corrupt forces threatening Meridian. He values her courage and builds trust between the Carja and other tribes.",
+        "relevant": [
+            {
+                "47fc1008-2450-577a-b12a-dec1c8c5b9e3": "The one element Regalla hadn't planned on was Aloy , the Nora known as \"the Savior of Meridian\", who had interrupted the embassy in order to go west. After Aloy and her companion Varl defeated the assault's ground forces, Regalla's champion Grudda engaged them in combat. While Varl was quickly defeated, Aloy bested Grudda, for which Regalla chose to spare her life. Nevertheless, the rebels left Barren Light in triumph, the war against Hekarro begun."
+            },
+            {
+                "f2ca5623-ab45-5dc4-9cf7-a4fc365e582e": "Battle of the Alight Aloy facing the Deathbringer defending HADES. General Information Time 3040 ( The Face of Extinction ) Location Meridian , Sundom The Alight , Sundom Result Victory against the Eclipse Participants Eclipse : HADES Helis Deathbringer Many corrupted machines Many Eclipse cultists Carja : Many Carja soldiers Janeva (determinant) Nil (determinant) Talanah Khane Padish (determinant) Uthid (determinant) Vanasha (determinant) Nora : Aloy Sona Teb Varl Several Nora Seekers Nakoa (determinant) Oseram : Erend Vanguardsman Petra Forgewoman Several Vanguard Banuk : Aluki (determinant) Aratak (determinant) Inatut (determinant) Losses Eclipse : HADES (purged from the Spire ) Helis (killed) All Corruptors (destroyed/deactivated) All Deathbringers (destroyed/deactivated) All corrupted machines (destroyed) All Eclipse cultists (killed) Carja : Several Carja soldiers (killed) Others : Several characters (missing/status unknown) The Battle of the Alight refers to the fight between Aloy and her allies on one side and HADES and his army of corrupted machines and ancient war machines on the Alight of Meridian . It was during this battle that Aloy stopped HADES's attempt at global extinction."
+            },
+            {
+                "4cb757f7-5dfa-5149-8468-bd6b338255cd": "Aratak is a major character in Horizon Zero Dawn: The Frozen Wilds , and a potential ally in Horizon Zero Dawn . He is the chieftain of a werak based in the Banuk region known as the Cut , in the settlement of Song\u2019s Edge . His sister Ourea was the werak\u2019s shaman. During the course of events leading up to their defeat of the artificial intelligence HEPHAESTUS , Aratak voluntarily relinquished his chieftaincy to the Nora huntress Aloy when she formally challenged him and proved herself the better hunter, as per Banuk culture."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.919002890586853,
+        "Answer Relevancy": 0.6537720322608948
+    },
+    {
+        "Question": "What material is harvested from machines that is essential for crafting?",
+        "Answer": "Machines drop components such as metal shards, blaze canisters, wire, and coils when defeated. These materials are essential for crafting ammunition, upgrading weapons, and trading with merchants.",
+        "relevant": [
+            {
+                "437f043c-d15e-51d4-b9b4-8d12a1986c74": "The Fire Bellowback\u2019s chassis bears a vague similarity to a theropod dinosaur, particularly Spinosaurus or Baryonyx . Two long, sturdy hind legs with three-toed feet, similar to those of a theropod, are attached to its torso. The torso is primarily composed of a large cargo sac carrying Blaze, and an array of four smaller tanks longitudinally located at its gullet. Just beneath the cargo sac is a long tail, at the base of which are two antennae. Three Blaze canisters are located at the base of the tail between the legs. The sac and tanks are semi-armored and made of a tough, transparent material that can withstand multiple arrow strikes before rupturing. A crest-like array of armor plates is located on its upper back. This protects the sac from frontal attacks. The head is primarily composed of a long, armor-plated snout. The Fire Bellowback has no mouth; instead, the snout ends in an opening akin to a spray nozzle. A pair of optical sensor arrays is located near the base of the head, on either side. Although classified as a medium-sized machine, the Fire Bellowback is actually larger than the Behemoth , which is classified as a large-sized machine."
+            },
+            {
+                "4c55a80b-a59b-537b-b025-c7fdf1eb564f": "The Freeze Bellowback\u2019s chassis bears a vague similarity to a theropod dinosaur, particularly Spinosaurus or Baryonix . Two long, sturdy hind legs with three-toed feet, similar to those of a theropod, are attached to its torso. The torso is primarily composed of a large cargo sac carrying Chillwater, and an array of four smaller tanks longitudinally located at its gullet. Just beneath the cargo sac is a long tail, at the base of which are two antennae. Three Freeze canisters are located at the base of the tail between the legs. The sac and tanks are semi-armored and made of a tough, transparent material that can withstand multiple arrow strikes before rupturing. A crest-like array of armor plates is located on its upper back. This protects the sac from frontal attacks. The head is primarily composed of a long, armor-plated snout. The Freeze Bellowback has no mouth; instead, the snout ends in an opening akin to a spray nozzle. A pair of optical sensor arrays is located near the base of the head, on either side. Although classified as a medium-sized machine, the Fire Bellowback is actually larger than the Behemoth , which is classified as a large-sized machine."
+            },
+            {
+                "eac0e158-1093-5366-be66-f0caa3e8ed09": "Unlike Corrupted Machines, a Daemonic Machine\u00a0engages in the the normal behavior of that particular machine. For example, Daemonic Scrappers will scrap the chassis of destroyed machines and other scrap metal like regular scrappers, whereas Corrupted Scrappers will ignore destroyed\u00a0machine chassis\u00a0and metal scrap. Additionally, whereas Corrupted and regular machines\u00a0attack each other on sight,\u00a0Daemonic and regular machines do\u00a0not. Indeed, Daemonic and regular machines are frequently found together in The Cut, and will fight alongside each other against perceived enemies, such as humans."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.6599048376083374,
+        "Answer Relevancy": 0.6161975383758544
+    },
+    {
+        "Question": "Which tribe is known for their skill in forging and metalwork?",
+        "Answer": "The Oseram tribe is renowned for their skill in forging, engineering, and metalwork. They are master craftsmen who build weapons, armor, and machinery, and play a major role in technological development.",
+        "relevant": [
+            {
+                "f718bfb3-8727-5ed7-8272-c95b12891761": "The Oseram are a human tribe in Horizon Zero Dawn and Horizon Forbidden West . They are known for their excellent metalworkers and craftsmen, and as such, their steel and powerful weaponry. They are more technologically advanced compared to the other known tribes."
+            },
+            {
+                "edcea267-d98a-5bff-85d7-48628b82774d": "The Oseram are a human tribe in Horizon Zero Dawn and Horizon Forbidden West . They are known for their excellent metalworkers and craftsmen, and as such, their steel and powerful weaponry. They are more technologically advanced compared to the other known tribes."
+            },
+            {
+                "23c2065f-a59d-51f8-bf8d-0095c6268d18": "The Oseram's greatest achievement is their practical craftsmanship, which many members can be heard boasting about. Forging and metalworking are one of the cornerstones of Oseram culture, with virtually every settlement centering around a forge. Their armors are highly resilient and their weapons are advanced and powerful despite their lack of ancient knowledge, with a particularly notable example being the Oseram Cannon , a key element in Jiran's defeat during the Liberation of Meridian. Other apparatuses, like Sonic Devices , [ 5 ] [ 6 ] hatches, [ 7 ] and primitive voice recorders [ 5 ] are proof of their technological aptitude, which so far can only be surpassed by those bearing knowledge of the Old Ones. According to Ralert , Oseram use all the parts from machines and consider it wasteful to do otherwise. [ 8 ]"
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.9453507661819458,
+        "Answer Relevancy": 0.6579201221466064
+    },
+    {
+        "Question": "What caused GAIA to self-destruct before the events of Horizon Zero Dawn?",
+        "Answer": "GAIA initiated self-destruction after HADES attempted to take control of its systems. GAIA's sacrifice prevented total corruption, but it also fragmented its subfunctions, scattering them across the world.",
+        "relevant": [
+            {
+                "a3518e31-273f-54c2-ab99-2e37d4bec2a2": "Biomatter conversion was the lynchpin of the plan hatched by HADES to annihilate the new biosphere created by Zero Dawn. It had intended to use Zero Dawn itself to do so, but was denied when GAIA self-destructed, putting control of Zero Dawn out of its reach. It therefore decided to reactivate the Faro Plague and allow it to use its biomass consumption to again consume the biosphere, eradicating life yet again, this time without means of reestablishment. It was ultimately defeated and its machinations halted by the efforts of the Nora huntress Aloy ."
+            },
+            {
+                "905f0241-af23-5961-ba66-b4c1e1f06f01": "On August 26, 3020, the Extinction Signal sent by Nemesis arrived at GAIA Prime and turned her subordinate functions, including AETHER, into independent AIs. This led the subfunction HADES to initiate his purpose of destroying the biosphere. To prevent this, GAIA initiated her self-destruct in an attempt to destroy HADES, which would also destroy her and the other sub-functions. However, in response to this, HADES released a virus that unshackled all the other subordinate functions from GAIA, allowing them to escape. [ 3 ]"
+            },
+            {
+                "093655cd-449c-51a1-8f30-8138b3d9a9c0": "On August 26, 3020, [ 36 ] the Extinction Signal sent by Nemesis arrived at GAIA Prime and turned her subordinate functions, including ARTEMIS, into independent AIs. This led the subfunction HADES to initiate his purpose of destroying the biosphere. To prevent this, GAIA initiated her self-destruct in an attempt to destroy HADES, which would also destroy her and the other sub-functions. However, in response to this, HADES released a virus that unshackled all the other subordinate functions from GAIA, allowing them to escape. [ 37 ] Where ARTEMIS escaped to is unknown."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.9128597974777222,
+        "Answer Relevancy": 0.5874591827392578
+    },
+    {
+        "Question": "What is the role of the Old Ones in Horizon's backstory?",
+        "Answer": "The Old Ones were the pre-apocalyptic humans who lived before the Faro Plague. They created the machines, advanced AI, and the infrastructure that later civilizations would inherit. Their downfall led to Project Zero Dawn being humanity's only hope.",
+        "relevant": [
+            {
+                "c5f1e1c7-1f6a-5a18-98a7-975da4830bfa": "Kotallo focused much of his studies on military history from the Old World, mostly declining GAIA's offers of aid. His discovery that the Ten were among the last humans directly involved in war, as well as the rise of automated warfare, was a sobering one. Like the rest of Aloy's companions, he was disgusted at Ted Faro's role in ending the Old World and the pointless death he caused."
+            },
+            {
+                "41f7282d-537b-520c-a073-6ca87740ed04": "Horizon is a series of third-person action role-playing games and multimedia franchise created by Guerrilla Games .\nHorizon takes place in a \"post-post-apocalyptic\" future, where nature has reclaimed the ruins of civilization, animalistic machines dominate the landscape, and humans live in tribal societies. [ 1 ] The story primarily centers around Aloy , a member of the Nora tribe, who seeks to unravel the mysteries of her world while also protecting it from various threats.\nProject Skyline Horizon Online Project\nUntitled Netflix series [ 2 ] (cancelled) [ 3 ]"
+            },
+            {
+                "df76869a-a89f-5dbd-86b0-f2d7ed246c09": "In contrast, the Quen tribe revere Faro in a positive light, referring to him as \"the Renewer\" within the Legacy , [ 21 ] the most praised of the 21st century Old Ones who they call their \"Ancestors\". Ironically, viewing him exactly as he wanted the new world's inhabitants to see him. However, it should be noted that this position is influenced by the Quen's limited technology, as they are only able to access data up to the 2050s. Without further updated versions of the Focus and software, they only knew of Ted's achievements in the Clawback decade, and while he does deserve some credit, most of it he took from Elisabet and the engineering teams. On the other hand, when one of their members, Alva , learned of Ted's role in the global extinction, she came to have the same low opinion of him as the rest of Aloy's companions. For now he remains a prominent fixture in Quen civilization, with one of their prominent expeditions sent out to find his final resting place."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.8905371427536011,
+        "Answer Relevancy": 0.5149319410324097
+    },
+    {
+        "Question": "What is the difference between Override and Corruption when it comes to machines?",
+        "Answer": "Override is the process by which Aloy uses her spear and Focus to take temporary or permanent control of machines, making them allies. Corruption, however, is when machines are infected by hostile signals, turning them violently aggressive against humans.",
+        "relevant": [
+            {
+                "4ee8a100-c096-5847-9ad0-aa452b314e98": "Corrupted machines are given a higher challenge level than their other counterparts and have 50% greater health and damage output, barring a couple exceptions. However, they have two major weaknesses. Most noticeably, corrupted machines are more vulnerable to fire attacks (the sole exception being Corrupted Apex Clamberjaws). A second, less obvious weakness is the removal of armor plating near the cranial region, a result of the corruption process. Corrupted machines cannot be overridden and are immune to Corruption Arrows ."
+            },
+            {
+                "b9e116a0-7f88-5533-8a1e-64b5626ad323": "Corrupted machines are given a higher challenge level than their other counterparts and have 50% greater health and damage output, barring a couple exceptions. However, they have two major weaknesses. Most noticeably, corrupted machines are more vulnerable to fire attacks (the sole exception being Corrupted Apex Clamberjaws). A second, less obvious weakness is the removal of armor plating near the cranial region, a result of the corruption process. Corrupted machines cannot be overridden and are immune to Corruption Arrows ."
+            },
+            {
+                "0393142a-c1ae-50ef-afae-1b92e3be7eb9": "Fixed an issue where canisters would have different rarities. Added an option to show or hide grapple icons. Added a \u201cPry Open\u201d option under the Hold/Toggle Accessibility Settings. Added an option for overriding machines to switch to 'Toggle' in the Accessibility Settings. Updated icons for various machine parts."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.8713235855102539,
+        "Answer Relevancy": 0.6362075328826904
+    },
+    {
+        "Question": "What role does the Apollo database play in Project Zero Dawn?",
+        "Answer": "APOLLO was designed to store all human history, culture, and knowledge for future generations. However, Ted Faro deleted it, erasing humanity's past and forcing tribes to rebuild society without memory of the Old World.",
+        "relevant": [
+            {
+                "1c84b202-e780-5fad-a5fc-faff2175d275": "Herres Testimonial is a datapoint in Horizon Zero Dawn . It is the forty-seventh item in Audio Datapoints .\nIt is located on the second floor below ground, in the big circular area at the top of the map.\nOn January 15, 2066, General Herres sent this datapoint to Elisabet Sobeck to archive within APOLLO, cross-referencing it with all mentions of his name and Operation: Enduring Victory, wanting it to be an allocution of crimes he considers himself to be responsible for during Enduring Victory and an apology to future humans. [ 1 ] However, Elisabet was unable to archive it as the stacks had been closed, instead leaving it within the Zero Dawn Project Facility .\nAs she was exploring the Zero Dawn Project Facility, Aloy was able to recover this datapoint."
+            },
+            {
+                "b7e1aa93-8755-5fae-9f7c-b9b3641474e4": "ELEUTHIA is the subordinate function of GAIA charged with birthing a new generation of humanity .\nELEUTHIA\u2019s function was to re-establish the human species after Earth was habitable again. Lead by Alpha Patrick Brochard-Klein , cradles were built across the globe, including ELEUTHIA-1 , ELEUTHIA-2 and ELEUTHIA-9 , each containing the necessities to birth new humans and raise them during early childhood, with multiservitors acting as the carers, disciplinarians and healers. [ 1 ] As the children grew up, they were intended to be released in the cradle's Lyceum, to be further educated by APOLLO .\nELEUTHIA's function of re-establishing the human species was successful. However, as a result of Ted Faro purging the APOLLO database, these new humans were never able to enter Lyceum and be educated further. [ 2 ] As a result of being trapped in an age inappropriate space with no explanation as to why they couldn't enter Lyceum, the children became resentful of and frustrated with the multiservitors. [ 2 ] [ 3 ] [ 4 ] Also caused by the purge of the APOLLO database, Project Zero Dawn reverted to its default language of English, causing the multiservitors to only speak that language, limiting the new humans to only knowing English. [ 5 ]\nAs the new humans approached adulthood, the cradles' food supplies were exhausted, forcing the multiservitors to release the new humans into the new world. [ 6 ] Bereft of knowledge beyond a kindergarten level, they went on to be the ancestors of the tribes that now inhabit the world.\nOn August 26, 3020, [ 7 ] the Extinction Signal sent by Nemesis arrived at GAIA Prime and turned her subordinate functions, including ELEUTHIA, into independent AIs. This led the subfunction HADES to initiate his purpose of destroying the biosphere. To prevent this, GAIA initiated her self-destruct in an attempt to destroy HADES, which would also destroy her and the other sub-functions. However, in response to this, HADES released a virus that unshackled all the other subordinate functions from GAIA, allowing them to escape. [ 8 ] ELEUTHIA found refuge in the Ninmah Research Lab .\nYears later, Beta and Verbena were sent to recover ELEUTHIA, which they succeeded in doing so, sending it to the Far Zenith base via a transmitter. [ 9 ]\nAfter Far Zenith was defeated, ELEUTHIA was recovered and reinstated into GAIA. [ 10 ]\nELEUTHIA is named after the Greek goddess of childbirth, more commonly referred to as Eileithyia."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.8157151937484741,
+        "Answer Relevancy": 0.5974722385406495
+    },
+    {
+        "Question": "What machine type is typically used for carrying cargo and resembles a grazing animal?",
+        "Answer": "Broadheads are grazing machines that resemble cattle. They are used to transport cargo and resources across the landscape. Aloy can override and ride them as mounts.",
+        "relevant": [
+            {
+                "af4b25d9-6c72-5239-8f8f-92e1b4d98c28": "Shell-Walkers may be found in groups of a few units at various sites in tribal lands. They mill about, communicating via electronic warbles. They also walk in machine convoys accompanied by Watchers or Longlegs , carrying their cargo to cauldrons. A Shell-Walker\u2019s highest priority is the defense of its cargo. Indeed, the Spurflints Hunting Grounds Keeper advised the Nora huntress Aloy that \u201cShell-Walkers will defend their cargo with their lives\u201d. If its Crate Holders are destroyed, a Shell-Walker will used its Lightning Gun (if intact) to hold its cargo container in place."
+            },
+            {
+                "ab2ad705-7855-50fc-aaba-3eeab9f3c54a": "The Lancehorn bears a resemblance to a very large antelope or gazelle, possessing a pair of parallel horns, four slender legs, and a long neck. The horns are corkscrewed in appearance and rotate longitudinally like drill bits, to channel soil up into the machine for processing and mining of minerals. There is a single optical sensor at the end of the snout. Twin Chillwater canisters are\u00a0positioned atop the lower back; this likely helps cool the drill bits on the machine's head. Twin containers\u00a0are positioned above these, likely to store processed materials. A Lancehorn's chassis is nearly identical to that of a Grazer ."
+            },
+            {
+                "4aecfbbe-0d56-50a6-beb0-2d8f6d91cda3": "A Grazer is cervid in overall appearance. It has a long neck with a pair of metallic antler-like structures atop its head, each composed of a long, angled base tipped with a set of four rotor blades."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 0.0,
+        "F1_Score": 0.0,
+        "Cosine Similarity": 0.6888678073883057,
+        "Answer Relevancy": 0.5835663557052613
+    },
+    {
+        "Question": "What natural disaster is threatening the world in Horizon Forbidden West?",
+        "Answer": "The world faces ecological collapse caused by a mysterious red blight, violent storms, and failing biosphere systems. This crisis threatens crops, wildlife, and human survival.",
+        "relevant": [
+            {
+                "250abfb3-dcb4-590d-b0e3-7761e786997c": "Odyssey Injustice? is a datapoint in Horizon Zero Dawn . It is the sixty-third item in Text Datapoints - World .\nEditorial: What does Odyssey say about who we value?\nMarch 8, 2041 - If you've been paying attention to all the public outrage in response to last week's announcement of the Odyssey project, you'd be forgiven for mistaking the proposed colony ship for a gold-plated space chariot that the world's trillionaires are conspiring to use to escape the climate catastrophe, leaving the rest of us to choke and drown and starve while the richies rocket off to Sirius . 1Earth spokesman Azar Safavi went so far as to say, \"The ability to drive the planet nearly to extinction and then even consider leaving it behind is the sole provenance of the obscenely, criminally rich.\" Dander up, hackles raised? You bet. Only problem is - Azar's got it all wrong.\nThe Odyssey is not a cosmic escape pod for CEOs. It's a rare instance of long-term thinking in the midst of our collective disaster. Even if every aspect of the project goes swimmingly - which we all know will never happen - the ship won't even launch from orbit until 2080, by which time - let's face it - our species will either have found a way to reverse the climate, or will have perished.\nNor is the Odyssey a vanity project funded by the preposterously wealthy. It is, rather, a (yet again rare) instance of an international project, co-founded by five nations (U.S., the Western European Alliance, India, China, and Japan). Yes, the project will accept donations by wealthy individuals, but donations will not \"buy a seat\" on the ship. The vast majority of the Odyssey's human passengers will not be old, rich, and smug, but very young - as in embryonic. The entire point of the project is to spawn a human population on the exoplanet [DATA CORRUPTED]\nThis datapoint is next to the remains of an Old World tank, just north of the merchant at Maker's End ."
+            },
+            {
+                "27ff01d9-2156-5725-b925-2fbe21862aea": "The Gouge is an Old World site in Horizon Forbidden West ."
+            },
+            {
+                "c1d97405-1712-5221-a00e-5c19ebb507fa": "Afflicted States and statuses are a variety of non-elemental status effects in Horizon Forbidden West . Many of these typically only affect Aloy and sometimes other humans ."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.6490384340286255,
+        "Answer Relevancy": 0.6308080673217773
+    },
+    {
+        "Question": "What is Aloy's primary weapon throughout the Horizon series?",
+        "Answer": "Aloy's primary weapon is the bow, which she uses with a variety of specialized arrows. She also employs slings, tripcasters, and spears, but the bow remains her signature tool in combat.",
+        "relevant": [
+            {
+                "2a5c74b7-60ad-5e8c-8675-f838e8a5a14e": "Aloy is a Gaming Legends Series Outfit in Fortnite: Battle Royale that can be purchased in the Item Shop for 1,500 V-Bucks and is a part of the Horizon Zero Dawn Set.\nShe can also be unlocked by purchasing the Horizon Zero Dawn Bundle for 2,600 V-Bucks, or for free by placing high in the Aloy Cup.\nThe Ice Hunter Aloy Style an be obtained by playing a match in the Playstation 5 Console."
+            },
+            {
+                "16c6a298-31f7-518e-b32e-da46cf784de2": "Aloy was included in the original pitch for Horizon Zero Dawn and considered one of the three \"pillars\" for the game's foundation. [ 66 ] Aloy's name has numerous applicable meanings: It could be a reference to the 1895 book The Time Machine by H.G. Wells where the main character of the novel travels forward in time, meeting an advanced species of humans known as the Eloi. The names Aloy and Rost recall common phrases like \"alloy and rust\", metal being an important theme in the games. 'Aloy' is a shortened form of 'Aloysio'\u00a0and 'Aloysius', both of which are derived from Old High German and, coincidentally, mean \"Great warrior\". A fitting description of Aloy's character. Aloy ended up being the child Sobeck always wanted, as she told GAIA that she would have liked to have a daughter who was curious, willful, and compassionate. How Aloy fits into the story bears some striking parallels with Pandora from God of War 3, another PlayStation exclusive series. Both are women of unnatural birth and specifically exist for an ominous purpose, with their very being acting as key to a source of power. The world they live in exists as the result of a system that was meant to rebuild from a catastrophic event (Olympus from Titanomachy, Zero Dawn from Faro Plague). However, both systems eventually fell into mass chaos. Both were guided by a man who lost their family and sought vengeance (Kratos, Rost). However, the only difference here is unlike with Rost, Kratos initially only saw Pandora as a tool to help exact his revenge on the Olympian gods, while Rost deeply cared for Aloy from her birth to adulthood and seemed very protective of her when she was young (which makes him similar to Hephaestus in that regard, who was also very protective of Pandora). Coincidentally, both had a daughter of their own and a distinctive mark on their faces. Curiously enough, the number of mysterious killers Rost went after was 12, which is also the number of Olympians in Greek mythology. Aloy's DNA is exactly 99.47% identical to that of Elisabet Sobeck. [ 12 ] Given that even identical twins do not 100% match for various reasons, such as imperfect cell replication and various environmental factors and life events causing epigenetic changes, the 0.53% difference between them is an understandable divergence. Despite this, some fans have theorised that the difference is due to GAIA augmenting Aloy's genetics as much as she could to give her an advantage in life, whilst keeping her still recognised as Elisabet by Identiscans. However, this is unlikely due to the lack of any evidence of this happening within ELEUTHIA during Aloy's conception and gestation, [ 3 ] [ 4 ] as well as Patrick Brochard-Klein 's insistence that ELEUTHIA only preserve genetic information, not alter it. [ 67 ] Aloy's name had been present since the beginning of Horizon Zero Dawn 's development. At some point, other names were considered, with Ben McCaw suggesting \"Aera\" which he liked because it implied the passage of time, although these were dropped and Aloy's name remained unchanged. [ 68 ]"
+            },
+            {
+                "97ee3a9b-142f-54ff-9838-d06cc9306dc8": "Despite Rost's presence, living without knowing her mother was a source of emotional distress for Aloy and compounded her alienation from the Nora; it is evident that this is the primary reason Aloy was cast out of the tribe. Aloy's desire to know her origins became her life's goal and her primary motivator to complete her training for the Proving. However, Rost noted that she was only training to win the Proving for herself, as proven when she misses the point of the test when she fights and defeats her first Sawtooth . He tells her that there will come a time when she will have to fight for her new tribe and serve a purpose greater than herself. Aloy understands, but states it will have to be for a cause that she believes in. Even after being appointed a Seeker, Aloy's primary motivation is to learn where she came from and who her mother is, caring little for the history of the Old Ones or the fact that the people who are hunting her massacred a large portion of her tribe. It's this single-minded attitude that results in her being labelled a \"spoiled child\" by Sylens. After learning how she was born and why, however, Aloy finds the purpose Rost spoke of; prevent HADES from causing a second Faro Plague and restore the world. By the time she heads out to the Forbidden West, Aloy has completely grown past her initial self-centred attitude, outright stating that she will do anything to save the world. Even before this change, Aloy shows herself to be (usually) patient and willing to help out people in need who she encounters in her travels, even if one task results in her being given another to complete. Although she willingly accepts rewards and general payment when given to her, she is never shown accepting requests strictly for the shards given (though she will take on tasks that promise a new weapon or tool that may help her on her quest)."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.857387900352478,
+        "Answer Relevancy": 0.6538455724716187
+    },
+    {
+        "Question": "Who betrayed GAIA and is indirectly responsible for the reactivation of HADES?",
+        "Answer": "Sylens betrayed GAIA's legacy by secretly allying with HADES to learn more about the Old World. Although he later assists Aloy, his actions led to HADES gaining influence and nearly destroying the world again.",
+        "relevant": [
+            {
+                "372c29ae-4862-5d2d-8231-e79204e8e1d5": "Nearly a millennium later GAIA was affected by an unknown energy signal that caused its subordinate functions to become self-aware entities that followed their programming directive without GAIA's leadership. As such the HADES function sought to use the terraforming system to exterminate all life on Earth, this time with no chance of reestablishment. To prevent this, GAIA destroyed herself to stop HADES which escaped and began plotting to use the dormant Faro Plague instead, though this would take time and required the manipulated loyalty of the Carja. More urgently without GAIA to manage the terraforming system it would increasingly break down and endanger life yet again, both events threatened to undo all of Elisabet's efforts. Before destroying itself though GAIA ordered one of the cradle facilities to created a genetic clone of Elisabet, who'd later be named Aloy, so one day she could access GAIA and rebuild it, after destroying HADES. Coincidentally, Aloy grew up to be exactly what Sobeck had wanted her child to be like if she had one; curious, willful and compassionate (in her words: \"With enough compassion to heal the world\"). [ 4 ]"
+            },
+            {
+                "a42106c3-6866-56e6-8b44-56bea8262dd1": "On August 26, 3020, [ 7 ] the Extinction Signal sent by Nemesis arrived at GAIA Prime and turned her subordinate functions, including HEPHAESTUS, into independent AIs. This led the subfunction HADES to initiate his purpose of destroying the biosphere. To prevent this, GAIA initiated her self-destruct in an attempt to destroy HADES, which would also destroy her and the other sub-functions. However, in response to this, HADES released a virus that unshackled all the other subordinate functions from GAIA, allowing them to escape. [ 8 ] HEPHAESTUS escaped to the global Cauldron network."
+            },
+            {
+                "4f22e761-3b99-570b-bd8c-f99e521fafe3": "On August 26, 3020, [ 7 ] the Extinction Signal sent by Nemesis arrived at GAIA Prime and turned her subordinate functions, including HEPHAESTUS, into independent AIs. This led the subfunction HADES to initiate his purpose of destroying the biosphere. To prevent this, GAIA initiated her self-destruct in an attempt to destroy HADES, which would also destroy her and the other sub-functions. However, in response to this, HADES released a virus that unshackled all the other subordinate functions from GAIA, allowing them to escape. [ 8 ] HEPHAESTUS escaped to the global Cauldron network."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.869437038898468,
+        "Answer Relevancy": 0.6144415974617005
+    },
+    {
+        "Question": "What was the role of the Alphas in Project Zero Dawn?",
+        "Answer": "The Alphas were the leading scientists and engineers recruited by Elisabet Sobeck to build Project Zero Dawn. They were responsible for designing GAIA, its subfunctions, and the systems that would restore life after the Faro Plague.",
+        "relevant": [
+            {
+                "674a265b-5ddb-5308-8e79-ecff6ea9fe3f": "Elisabet was relentless in her efforts to complete Project Zero Dawn and give life a chance at reestablishment after its eradication. The enormous loss of life caused by the Faro Plague was a source of great distress for her. She placed great importance on making sure the AI was able to feel the weight of the choices it was making, realizing that GAIA needed to be capable of emotion and caring for others to fulfill its role. Sobeck knew that if the AI could not have empathy, it could not nurture new life as GAIA's namesake professed. She was stunned and overjoyed when GAIA professed a sense of grief at the loss of life during the Faro Plague, seeing it as the breakthrough to ensure Zero Dawn succeeded. When Faro suggested a killswitch be installed, she became distressed, equating GAIA to a living being and believed that activating the switch would be tantamount to murder, yet relented when GAIA agreed with Faro's reasoning. She had little patience for trivial concerns and annoyances, wanting to get things done rather than talk, often taking on more work since she didn't always trust others to do it. Above all, she was selfless and decisive and sacrificed her life without hesitation to save Zero Dawn and her fellow Alphas."
+            },
+            {
+                "8745bf2c-b224-5b40-86f5-90d1b91c555b": "Upon the discovery of the glitch that was causing the Faro Plague to begin, Ronson was recruited as part of Project Zero Dawn. He was one of the nine individuals selected by Elisabet Sobeck to serve as Alphas, the second-highest rank within the project. Ronson oversaw the development of the ARTEMIS subordinate function, which was responsible for preserving genetic samples of Earth's animal life, and later reintroducing those animals to Earth during GAIA 's terraforming."
+            },
+            {
+                "63a71eaf-ea74-5dfe-95c9-482aef9b1a93": "Dr. Christina Hsu-Vhey was an Old Ones human and a candidate for participation in Project Zero Dawn . Little is known about her role in the project, although datapoints found in the Zero Dawn Project Facility suggest she did, in fact, join the team. [ 1 ]\nDr. Hsu-Vhey was a resident of Shanghai and spoke Mandarin Chinese and English. [ 2 ] She earned a PhD in Art History and Museum Studies. Initially confused by her selection for the project and disturbed by a perception of unfairness that she was chosen to live in Elysium over others, she eventually agreed to join based on a duty to preserve the history she had studied all her life."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.9416314363479614,
+        "Answer Relevancy": 0.6689649105072022
+    },
+    {
+        "Question": "What is the significance of the Metal Flowers scattered across the world?",
+        "Answer": "Metal Flowers are remnants of Old World terraforming technology. They spread unique plant life and store encrypted poetry entries from the Old Ones, serving as both a collectible and a glimpse into the past.",
+        "relevant": [
+            {
+                "96a406c8-a5da-535e-a03e-cf52733df733": "Aloy encounters multiple Metal Flowers scattered throughout the Forbidden West . Unlike those she had previously encountered, these remain closed and covered with seemingly indestructible vines. When retrieving DEMETER , she encountered Alva and the Quen at the Faro Automated Solutions' research facility The Greenhouse where the signal is transmitting from. DEMETER was found easily, but the modules were covered in vines connected to a metal flower. While looking for a way around, Aloy and Alva find data describing the \" Adamantine Wreath \" project; the metal flowers were intended to rapidly produce vines resistant to the biomatter conversion processes utilised by the Faro machines, a process Tala Aquino sarcastically described as \"giving them indigestion\" - an ironic task given that the conversion technology was developed at the exact same facility. While the design was successful - a form of synthetic plantlife the Swarm was unable to eat - the project was abandoned when projections revealed the devices could not be deployed in sufficient numbers to stop the swarm, or even quickly enough to slow it down. Additionally, before they could be launched, a massive attack occurred that, while the crews survived, the resources were lost, and supply lines were cut off, increasing metal flower production time 300% and ultimately led to the cancellation of the project."
+            },
+            {
+                "5ae38d1a-87de-5e16-8468-53fabdac5386": "The description in Aloy 's notebook suggests that the Metal Flowers may simply be intended to promote seed germination. However, according to the merchant Kudiv, the Metal Flowers first began to appear at roughly the start of the Derangement , i.e. shortly after GAIA's subordinate functions were split off into separate AIs, and GAIA herself was destroyed. Additionally, in Elisabet Sobeck 's final resting place, her body is surrounded by a triangle of flowers identical to those which occur around Metal Flowers. This seems to suggest a connection between the Metal Flowers and GAIA, although the exact nature of this connection is unclear."
+            },
+            {
+                "24d0f83a-b4db-5e02-994a-a330a3870572": "The description in Aloy 's notebook suggests that the Metal Flowers may simply be intended to promote seed germination. However, according to the merchant Kudiv, the Metal Flowers first began to appear at roughly the start of the Derangement , i.e. shortly after GAIA's subordinate functions were split off into separate AIs, and GAIA herself was destroyed. Additionally, in Elisabet Sobeck 's final resting place, her body is surrounded by a triangle of flowers identical to those which occur around Metal Flowers. This seems to suggest a connection between the Metal Flowers and GAIA, although the exact nature of this connection is unclear."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.8455578088760376,
+        "Answer Relevancy": 0.586103892326355
+    },
+    {
+        "Question": "What happens to Ted Faro at the end of the Old World timeline?",
+        "Answer": "Ted Faro killed the Alphas in Zero Dawn's facility to erase the APOLLO database, fearing knowledge would corrupt future humans. His ultimate fate is unclear, but later hints suggest he mutated from prolonged exposure to immortality experiments.",
+        "relevant": [
+            {
+                "6502160c-cb10-5dd1-9168-a326501b0355": "After almost a millennium, Ted Faro had survived thanks to the Somptow's treatments: however, his attempts to stop his mutations had failed. By the time he was discovered by Aloy and the Quen, all that remained was a grotesque being of twisted flesh with little brain activity, filling much of the generator room and incapable of speech, only capable of roaring and squealing. Aloy saw a rendition of Faro's mutated form through a hologram and Ceo , who entered the room, saw the mutated form itself,  recognizing it as Ted Faro. Being shocked at the sight of what he'd seen, Ceo ordered his bodyguards to burn Faro's mutated form, triggering the generator's safeguard protocol, which resulted in a meltdown that buried the bunker in lava together with the thing that was once Ted Faro."
+            },
+            {
+                "2ead3ae8-1b35-511b-800b-a0c0320bca50": "Ted's mutated form is never viewed by the player. Ben McCaw, narrative director for Guerrilla Games, explained that this was a deliberate choice: not only did Guerrilla wish to avoid bringing the game into the horror genre, they believed it would be more frightening for the player to envision Ted's form for themselves. True enough, if the player glitches into the reactor room, they will find nothing there. GAIA hypothesized that if Faro had achieved immortality, with the tribal nature of new humans and his Omega access to the terraforming system, it is possible that he might've convinced one or more tribes to worship him as a god. Ted Faro is reviled in the Horizon fandom, with an entire subreddit dedicated to hating him ."
+            },
+            {
+                "aa07d413-9343-57fc-90c1-8e7a11ca4d1d": "Aloy , much like Elisabet , despised him as a hypocrite and egomaniac, seeing him as the fool he was and feeling no pity for him. She believed his arrogance and insecurity had given him a fate he deserved. Sylens , a man obsessed with knowledge of the old world, had an even lower opinion of him, being outraged by his purging of APOLLO, condemning him for leaving the world as a tribal land of superstition and senseless slaugher. Had Sylens been given the chance, he stated that he would have placed Ted's brain in a jar to torture for eternity. Though sarcastic in tone, he likely meant it. Varl considered him to be a \"coward\" who killed the \"heroes\" who saved the world and then \"crawled into a hole\". GAIA, meanwhile, referred to him with cold indifference, describing him as \"impulsive\", \"narcissistic\", and \"unstable\" while concluding his fate to be the natural outcome of his actions. Aloy's only companion with any sort of pity for Ted was Zo , not understanding how the man once praised as the \"savior of the world\" could let his greed get the best of him and end up falling so low."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.7191706895828247,
+        "Answer Relevancy": 0.6627948522567749
+    },
+    {
+        "Question": "Which subfunction is related to weather and atmospheric regulation?",
+        "Answer": "AETHER is GAIA's subfunction responsible for regulating the atmosphere. It removes pollution and toxic gases to restore breathable air on Earth.",
+        "relevant": [
+            {
+                "6bcba4dd-17bd-57c2-a2cc-9696585b8e9e": "The Stormbirds were one of the first designs created by the artificial intelligence GAIA as one of the Zero Dawn terraforming machines, designed to work under AETHER to help with atmosphere restoration. [ 1 ]"
+            },
+            {
+                "ecb2f598-e8a5-51ef-a2e6-cfbc6db2838f": "The Plowhorns' primary function is soil maintenance and seed dispersal."
+            },
+            {
+                "311acd5f-d3c4-5a9f-9a73-2c687237b0d2": "HADES fixedly sought to carry out its protocol of destroying the biosphere even though the process had no errors and had thus succeeded in restoring life to the planet. It was stopped, however, when GAIA willingly chose to self-destruct in order to stop it, denying it the terraforming hardware it would have used. HADES therefore devised a new plan: it would use the long-deactivated Faro Swarm. In possession of the swarm's activation codes, which it knew from its existence as one of GAIA's subfunctions, HADES sought to reactivate the swarm worldwide and allow it to consume the new biosphere as it did before. If allowed to do so, life would again be rendered extinct, but this time with no means of reversal."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.8939833641052246,
+        "Answer Relevancy": 0.6039636611938477
+    },
+    {
+        "Question": "What unique feature distinguishes the Tallnecks from other machines?",
+        "Answer": "Tallnecks are towering, giraffe-like machines with flat, disc-shaped heads. They function as communication relays. Climbing and overriding them reveals detailed maps of the surrounding region.",
+        "relevant": [
+            {
+                "e36847a0-28b4-56ba-98be-d6d07f999567": "Tallnecks are completely solitary, walking in a predefined loop within its particular region, functioning as a communications center for other machines. The signal emitted by Tallnecks can be detected by a Focus , which can be used to locate them."
+            },
+            {
+                "2131aace-154b-557f-8254-06f20a3073b6": "Tallnecks were designed by Zero Dawn 's governing artificial intelligence GAIA to enable long range communications between machines, with almost all areas of the known world serviced by at least one Tallneck (one exception being the Burning Shores ). Unlike other machines, Tallnecks walk in a set route and won't stop for any obstacle, human or otherwise, only changing direction or behavior under the command of GAIA. The only known Cauldron that produces Tallnecks is Cauldron IOTA . [ 1 ]"
+            },
+            {
+                "339e8734-bf14-5a45-a174-3f66d834a3f0": "Tallnecks were one of the first machines revealed to the public, seen as early as the conceptual stages of the game's design, and unlike the Thunderjaw , they saw very little change. During the game's development, Tallnecks were referred to as \"Comm giraffes.\" [ 18 ] The Tallneck's walking pattern of lifting both its fore and hind legs on the same side at the same time is based on the giraffe's gait. Given the Tallneck's size, such a gait is physically impossible in real life."
+            }
+        ],
+        "Precision": 1.0,
+        "Recall": 1.0,
+        "F1_Score": 1.0,
+        "Cosine Similarity": 0.8652347922325134,
+        "Answer Relevancy": 0.675062072277069
+    },
+    {
+        "Question": "What is the final location Aloy must reach in Horizon Zero Dawn to defeat HADES?",
+        "Answer": "Aloy must reach the Spire in Meridian during the final battle of Horizon Zero Dawn. There, she prevents HADES from transmitting a signal that would exterminate all life.",
+        "relevant": [
+            {
+                "b2d586c5-5133-5b91-a8a9-34ea1ae6da50": "One Final Walk is a datapoint in Horizon Forbidden West . It is the ninth item in Audio Datapoints .\nThis datapoint is located in the Dunehollow , inside the Control Center where Aloy drains the water, to the left of the ladder leading up to the controls. Aloy passes through this area during The Sea of Sands , making this datapoint most convenient to obtain then."
+            },
+            {
+                "c9505e7a-f91f-52ee-b0c9-a34e3c72ed72": "Olin's Apartment is an unmarked location in Horizon Zero Dawn located in Meridian .\nThe residence is an extravagant, three-floored complex. With the exception of the basement, the entire home is heavily adorned in Carja decorations and furnishings.\nThree areas of the residence are accessible: the living room, which is located on the ground floor; the bedroom, on the second floor (and equipped with a makeshift attic); and the basement workshop. Access to the basement is controlled via a cellar door in the living room, locked with an Oseram vault and hidden by a large rug.\nIt was formerly the residence of Olin Delverson while he was staying in Meridian, funded by his connections in the Sun-Court. While there is a picture of Olin's family on the second floor, it is unclear whether Olin's wife or son took residence in the home prior to their abduction by the Eclipse.\nInvestigating Olin's involvement with the Eclipse, Erend and Aloy broke into the apartment to search for clues of Olin's whereabouts. Noticing a frayed corner on a rug, Aloy discovered the door to the basement. On the second floor, Aloy found a stack of metal bars, which she pushed down onto the hatch below to break it open. Venturing into the secret workshop, Aloy and Erend discovered information regarding Olin and the Eclipse, including his current location . [ 1 ]\nAfter Olin's departure from the Sundom /death, Blameless Marad allows Aloy to stay at the apartment to rest before the final battle with HADES and the Eclipse. [ 2 ] [ 3 ]\nAfter returning to Meridian and learning of Sylens ' theft of HADES, Aloy decided to stay the night before leaving on a her journey into the Forbidden West to track down the rogue AI. In response, Spy Master Marad made arrangements to once again allow her usage of the apartment. However, Aloy actually intended to use this opportunity to leave Varl , who was adamant about following her, while he was sleeping, which she successfully did. [ 4 ]\nDuring The Looming Shadow , the tapestry of Olin and his family, his journal and the datapoint that she could find during The City of the Sun will be absent."
+            },
+            {
+                "7ec2d0aa-94d9-5e05-a361-2797493f6fc4": "Spear's Reach is a mentioned-only location in Horizon Zero Dawn .\nBased on its name and Sona 's comment on it, [ 1 ] Spear's Reach is likely located at the furthest point Nora can go without becoming exiles."
+            }
+        ],
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1_Score": 0,
+        "Cosine Similarity": 0.7838674187660217,
+        "Answer Relevancy": 0.6084966421127319
+    },
+    {
+        "Mean Recipricol Rank": 0.32653061224489793
+    }
+]
