@@ -20,21 +20,9 @@ class Retriever:
 
         result = self.qclient.query_points(
             collection_name=self.collection_name,
-            prefetch=[
-                models.Prefetch(
-                    query=self.dense_model.encode(query), using="nomic", limit=limit
-                ),
-                models.Prefetch(
-                    query=models.Document(
-                        text=query,
-                        model="Qdrant/bm25",
-                    ),
-                    using="bm25",
-                    limit=limit,
-                ),
-            ],
+            query=("dense", self.dense_model.encode(query)),
             query_filter=rag_filter,
-            query=models.FusionQuery(fusion=models.Fusion.RRF),
+            limit=limit,
             with_payload=True,
         )
 
