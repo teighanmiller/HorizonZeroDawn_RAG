@@ -7,6 +7,7 @@ from src.scraper import scrape_data
 DENSE_DIM = 768
 BATCH_SIZE = 50
 COLLECTION_NAME = "HORIZON_RAG"
+PRELOADED_FILE_PATH = "data/horizon_data_2025-08-18_08-42-57.csv"
 
 
 def get_id(row: pd.Series) -> str:
@@ -94,13 +95,18 @@ def create_collection(client: QdrantClient, collection_data: pd.DataFrame):
         )
 
 
-def ingest():
+def ingest(preloaded: bool = False):
     dense_model = SentenceTransformer(
         "nomic-ai/nomic-embed-text-v1.5", trust_remote_code=True
     )
+
     qclient = QdrantClient("http://localhost:6333", timeout=60)
 
-    raw_data_path = scrape_data()
+    if not preloaded:
+        raw_data_path = scrape_data()
+    else:
+        raw_data_path = PRELOADED_FILE_PATH
+
     raw_data = pd.read_csv(raw_data_path)
     embedded_data = featurize_data(raw_data, dense_model)
     create_collection(client=qclient, collection_data=embedded_data)
