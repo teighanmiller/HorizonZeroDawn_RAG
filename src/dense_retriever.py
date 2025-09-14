@@ -18,11 +18,12 @@ class Retriever:
             ]
         )
 
+        dense_vector = self.dense_model.encode(query)
         result = self.qclient.query_points(
             collection_name=self.collection_name,
-            query=("dense", self.dense_model.encode(query)),
+            query=dense_vector,
+            using="nomic",
             query_filter=rag_filter,
-            limit=limit,
             with_payload=True,
         )
 
