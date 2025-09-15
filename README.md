@@ -5,15 +5,15 @@ It demonstrates ingestion, retrieval, evaluation, and deployment of an interacti
 
 ---
 
-## 📌 Problem Statement
+## Problem Statement
 
-Modern LLMs are powerful but limited by their training cutoff dates and hallucinations. When users query about **specific knowledge bases (e.g., Horizon Zero Dawn lore)**, the model often produces inaccurate responses.
+The world of Horizon Zero Dawn is vast and full of intricate stories, characters, and lore. With so much information, it can be hard for fans to find accurate answers to specific questions about the game.
 
-This project solves that problem by building an **end-to-end RAG pipeline** that retrieves relevant context from a **custom dataset** before sending it to the LLM. The system provides **factual, context-aware responses** through a **Streamlit application**.
+This project makes it easy to ask detailed questions about Horizon Zero Dawn lore and get clear, accurate answers, helping fans explore the game’s universe without getting lost or confused.
 
 ---
 
-## 🚀 Project Workflow
+## Project Workflow
 
 1. **Dataset Selection**
 
@@ -28,7 +28,7 @@ This project solves that problem by building an **end-to-end RAG pipeline** that
 
    - Dense vector search (embeddings) + BM25 for hybrid search
    - Retrieved documents are re-ranked before being passed to the LLM
-   - Prompt is dynamically constructed with retrieved evidence
+   - Prompt is dynamically constructed with retrieved evidence. It is also reworded by an LLM before querying for the actual answer.
 
 4. **Evaluation**
 
@@ -39,7 +39,7 @@ This project solves that problem by building an **end-to-end RAG pipeline** that
    - Metrics: Precision@k, Recall@k, and qualitative assessment
 
    **Comparing the data sets for retrieval results in Hybrid Search (File 2) having the better score in more queries:**
-
+   NOTE: This comparison used ollama LLMs to rewrite the queries to save money.
    --- Dataset Comparison ---
 
    File 1: evaluated_data_dense.json
@@ -119,7 +119,7 @@ This project solves that problem by building an **end-to-end RAG pipeline** that
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend:** Streamlit
 - **Knowledge Base:** Qdrant (Vector DB)
@@ -130,7 +130,7 @@ This project solves that problem by building an **end-to-end RAG pipeline** that
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone Repository
 
@@ -165,60 +165,47 @@ Create a `.env` file in the root directory:
 
 ---
 
-## 🎯 Evaluation Criteria Mapping
-
-- **Problem Description (2/2):** Clearly defined problem and motivation
-- **Retrieval Flow (2/2):** KB + LLM used, hybrid retrieval supported
-- **Retrieval Evaluation (2/2):** Dense, sparse, and hybrid evaluated
-- **LLM Evaluation (2/2):** Multiple prompts and approaches tested
-- **Interface (2/2):** Streamlit web UI
-- **Ingestion Pipeline (2/2):** Automated ingestion with Python script
-- **Monitoring (2/2):** User feedback + dashboard with 5+ charts
-- **Containerization (2/2):** Full docker-compose setup
-- **Reproducibility (2/2):** Clear setup, data included, dependency versions specified
-
----
-
-## 📊 Monitoring Dashboard
+## Monitoring Dashboard
 
 Example dashboard includes:
 
-- Query volume over time
-- Retrieval hit-rate
-- User satisfaction score
-- Average response length
-- Failure rate / fallback LLM usage
+- Time for different processes in the application (Retireval time, Reword time, Response time, Total time).
+- User likes, dislikes, no rating.
+- Chart of commonly queried categories.
+- Average response time
+- Token usage by query.
+- Total number of token used.
+- Total number of requests made.
 
 (_See `/dashboard/monitoring.py` for details_)
 
 ---
 
-## 🖼️ Screenshots & Demo
+## Screenshots & Demo
 
 - App screenshot:  
-  ![Streamlit Chat Interface](assets/app_screenshot.png)
+  ![Streamlit Chat Interface](assets/chat_example.png)
 
 - Dashboard example:  
   ![Monitoring Dashboard](assets/dashboard.png)
 
-- Video demo (click to watch):  
-  ![Demo Video](assets/demo.gif)
+---
+
+## Future Opportunities
+
+- Deploy to AWS/GCP/Azure for cloud access
+- Extend dataset beyond Horizon Zero Dawn → other games, knowledge bases
+- Experiment with different embedding models or LLMs for improved accuracy
 
 ---
 
-## 🔮 Future Opportunities
-
-- Deploy to AWS/GCP/Azure for cloud access 🌐
-- Extend dataset beyond Horizon Zero Dawn → other games, knowledge bases 🎮
-- Add **user query rewriting** for better retrieval 🔄
-- Experiment with **re-ranking models** for improved accuracy 📈
-
----
-
-## 📂 Repository Structure
+## Repository Structure
 
 ```
-├── data/         # Dataset
+├── assets/       # contains images and examples for demonstration purposes
+├── dev/          # Contains python files used for evaluation and testing in development
+├── hf_cache/     # Used for model storage in docker image
+├── data/         # Datasets
 ├── src/          # Contains python files for ingestion, RAG, UI and the Dashboard
 ├── docker-compose.yml
 ├── Dockerfile
@@ -229,7 +216,7 @@ Example dashboard includes:
 
 ---
 
-## 👤 Author
+## Author
 
 **Teighan Miller**  
 Second-Year Mechatronics Engineering, University of Waterloo  
