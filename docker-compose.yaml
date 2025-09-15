@@ -1,0 +1,57 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant
+    ports:
+      - "6333:6333" # Qdrant default port
+    volumes:
+      - qdrant_storage:/qdrant/storage
+
+  ingest:
+    build: .
+    container_name: data_ingest
+    depends_on:
+      - qdrant
+    volumes:
+      - ./hf_cache:/root/.cache/huggingface
+    entrypoint: ["python", "-m", "src.ingest_data"]
+    env_file:
+      - .env
+    environment:
+      - HF_HOME=/root/.cache/huggingface
+
+  ingest_preloaded:
+    build: .
+    container_name: data_ingest_preloaded
+    depends_on:
+      - qdrant
+    volumes:
+      - ./hf_cache:/root/.cache/huggingface
+    entrypoint: ["python", "-m", "src.ingest_data", "-p"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/healthz"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    env_file:
+      - .env
+    environment:
+      - HF_HOME=/root/.cache/huggingface
+
+  app:
+    build: .
+    container_name: streamlit_app
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./hf_cache:/root/.cache/huggingface
+    depends_on:
+      - qdrant
+    environment:
+      - HF_HOME=/root/.cache/huggingface
+    command: streamlit run src/app.py --server.port=8501 --server.address=0.0.0.0
+
+volumes:
+  qdrant_storage:
