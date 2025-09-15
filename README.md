@@ -82,21 +82,16 @@ This blends information retrieval + natural language generation — useful for c
    cd HorizonZeroDawn_RAG
    ```
 
-2. **Install dependencies**
+2. **Make a .env file**
+   The project uses an `.env` file for configuration. Key variables:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+   - AZURE_OPENAI_ENDPOINT_URI
+   - AZURE_OPENAI_API_KEY
+   - AZURE_API_VERSION
 
-3. **Prepare knowledge data**
+3. **Run the Docker Container**
 
-   - Run ingest_data.py using python -m src.ingest_data -p to ingest data using the prescraped data in the data folder. This will create a collection with the vectorized and processed data.
-   - (Optional) Run scraping script using python -m src.ingest_data . This will scrape raw data from Horizon Wikis
-
-4. **Run the app**
-   ```bash
-   streamlit run src/app.py
-   ```
+   - Follow the instructions found in README.Docker.md
 
 ---
 
@@ -131,7 +126,6 @@ This blends information retrieval + natural language generation — useful for c
 - Review user feedback for retrieval improvement.
 - Explore open-source LLM deployment.
 - Implement versioning for updated lore.
-- Implement docker.
 - Deploy using AWS.
 
 ---
