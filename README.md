@@ -14,8 +14,6 @@ A Retrieval-Augmented Generation (RAG) system built around _Horizon Zero Dawn_ �
 - [What I Learned & Skills Gained](#what-i-learned--skills-gained)
 - [Challenges & Resolutions](#challenges--resolutions)
 - [Future Work](#future-work)
-- [Why Employers Should Care](#why-employers-should-care)
-- [License](#license)
 
 ---
 
@@ -32,7 +30,7 @@ Employers: This demonstrates my ability to design, iterate, and improve on compl
 
 The purpose of **HorizonZeroDawn_RAG** is to create a system that:
 
-- Ingests knowledge (e.g. lore, character info, game mechanics) about _Horizon Zero Dawn_.
+- Ingests knowledge (e.g. lore, character info, game mechanics) about _Horizon Zero Dawn_. All knowledge is from the Horizon Wiki: https://horizon.fandom.com/wiki/Horizon_Wiki
 - Allows user queries (e.g. “Tell me the backstory of Rost,” or “How do machines evolve over time in the game?”).
 - Retrieves relevant documents/passages from the stored knowledge.
 - Feeds retrieved info into a language model to generate coherent, informed, context-aware answers.
@@ -73,7 +71,6 @@ This blends information retrieval + natural language generation — useful for c
 ## Getting Started
 
 **\*This will not work without adding Azure API credentials for a GPT4o-mini model.**
-**\*This is still in development and will be simplified using docker once implemented.**
 
 1. **Clone the repository**
 
