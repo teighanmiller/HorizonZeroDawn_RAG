@@ -1,6 +1,7 @@
 import uuid
 import argparse
 import pandas as pd
+from tqdm import tqdm
 from qdrant_client import QdrantClient, models
 from sentence_transformers import SentenceTransformer
 from src.scraper import scrape_data
@@ -53,7 +54,7 @@ def create_collection(client: QdrantClient, collection_data: pd.DataFrame):
 
     rows = [row for _, row in collection_data.iterrows()]
 
-    for index in range(0, len(rows), BATCH_SIZE):
+    for index in tqdm(range(0, len(rows), BATCH_SIZE)):
         batch = rows[index : index + BATCH_SIZE]
         client.upsert(
             collection_name=COLLECTION_NAME,
@@ -118,7 +119,7 @@ if __name__ == "__main__":
         "HorizonZeroDawnRAGIngest",
         description="Ingests scraped data into a Qdrant collection.",
     )
-    parser.add_argument("preloaded", "-p", action="store_true")
+    parser.add_argument("--preloaded", "-p", action="store_true")
     args = parser.parse_args()
 
     ingest(args.preloaded)
