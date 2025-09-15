@@ -91,7 +91,7 @@ This blends information retrieval + natural language generation — useful for c
 
 3. **Run the Docker Container**
 
-   - Follow the instructions found in README.Docker.md
+   - Follow the instructions found in README.Docker.md: https://github.com/teighanmiller/HorizonZeroDawn_RAG/blob/main/README.Docker.md
 
 ---
 
