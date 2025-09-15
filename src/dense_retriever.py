@@ -23,6 +23,7 @@ class Retriever:
             collection_name=self.collection_name,
             query=dense_vector,
             using="nomic",
+            limit=limit,
             query_filter=rag_filter,
             with_payload=True,
         )
