@@ -234,3 +234,5 @@ Example dashboard includes:
 **Teighan Miller**  
 Second-Year Mechatronics Engineering, University of Waterloo  
 Focus: AI, Machine Learning, and Software Development
+
+Connect with me on LinkedIn: www.linkedin.com/in/teighan-miller-b384a1231
