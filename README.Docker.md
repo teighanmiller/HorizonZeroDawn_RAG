@@ -29,10 +29,6 @@ AZURE_OPENAI_ENDPOINT_URI
 AZURE_OPENAI_API_KEY
 AZURE_API_VERSION
 
-```bash
-HF_HOME=/root/.cache/huggingface  # Hugging Face cache for models
-```
-
 ## Running the Project
 
 ### 1. Build all Docker images

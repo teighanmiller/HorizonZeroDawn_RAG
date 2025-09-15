@@ -1,128 +1,236 @@
-# HorizonZeroDawn_RAG
+# HorizonZeroDawn_RAG – End-to-End Retrieval-Augmented Generation System
 
-A Retrieval-Augmented Generation (RAG) system built around _Horizon Zero Dawn_ — combining external knowledge retrieval with generation / language model-based response tailoring.
-
----
-
-## Table of Contents
-
-- [Project Status](#project-status)
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Architecture & Tech Stack](#architecture--tech-stack)
-- [Getting Started](#getting-started)
-- [What I Learned & Skills Gained](#what-i-learned--skills-gained)
-- [Challenges & Resolutions](#challenges--resolutions)
-- [Future Work](#future-work)
+This project implements a full **Retrieval-Augmented Generation (RAG)** pipeline using the **Horizon Zero Dawn game lore dataset**.  
+It demonstrates ingestion, retrieval, evaluation, and deployment of an interactive question-answering system, with monitoring and user feedback collection.
 
 ---
 
-## Project Status
+## 📌 Problem Statement
 
-**In Development**  
-This project is actively being developed and refined. Certain components may not be fully functional yet without proper configuration or access to private keys (e.g., OpenAI Model API's). The repository reflects ongoing progress in building a complete Retrieval-Augmented Generation system.
+Modern LLMs are powerful but limited by their training cutoff dates and hallucinations. When users query about **specific knowledge bases (e.g., Horizon Zero Dawn lore)**, the model often produces inaccurate responses.
 
-Employers: This demonstrates my ability to design, iterate, and improve on complex AI/ML projects in real-world scenarios.
-
----
-
-## Project Overview
-
-The purpose of **HorizonZeroDawn_RAG** is to create a system that:
-
-- Ingests knowledge (e.g. lore, character info, game mechanics) about _Horizon Zero Dawn_. All knowledge is from the Horizon Wiki: https://horizon.fandom.com/wiki/Horizon_Wiki
-- Allows user queries (e.g. “Tell me the backstory of Rost,” or “How do machines evolve over time in the game?”).
-- Retrieves relevant documents/passages from the stored knowledge.
-- Feeds retrieved info into a language model to generate coherent, informed, context-aware answers.
-
-This blends information retrieval + natural language generation — useful for chatbots, game-companion tools, Q&A interfaces, etc.
+This project solves that problem by building an **end-to-end RAG pipeline** that retrieves relevant context from a **custom dataset** before sending it to the LLM. The system provides **factual, context-aware responses** through a **Streamlit application**.
 
 ---
 
-## Features
+## 🚀 Project Workflow
 
-- **Knowledge Base Construction** – pipeline for collecting, cleaning, and structuring relevant game lore or documentation.
-- **Document Retrieval** – indexing with embeddings/vector DBs for similarity search.
-- **Prompt / Query Handling** – manages user input and context.
-- **Generation Module** – LLM-based responses enriched by retrieved knowledge.
-- **Response Refinement** – optional hallucination filtering and summarization.
+1. **Dataset Selection**
+
+   - Chosen dataset: _Horizon Zero Dawn Lore Data_, taken from Horizon Wiki: https://horizon.fandom.com/wiki/Horizon_Wiki
+   - Format: Once scraped the data is chunked in a CSV file.
+
+2. **Data Ingestion**
+
+   - Custom Python script loads the dataset, chunks text, embeds it, and stores it in **Qdrant vector DB**
+
+3. **Retrieval Flow**
+
+   - Dense vector search (embeddings) + BM25 for hybrid search
+   - Retrieved documents are re-ranked before being passed to the LLM
+   - Prompt is dynamically constructed with retrieved evidence
+
+4. **Evaluation**
+
+   **Evaluation files can be found under the data folder**
+
+   - Retrieval approaches evaluated: dense, hybrid (Can be found under data/evaluated_data_dense.json and data/evaluated_data_hybrid.json, both of which used data/evaluation_data.json as a data set.)
+   - LLM evaluation with multiple prompt templates and scoring
+   - Metrics: Precision@k, Recall@k, and qualitative assessment
+
+   **Comparing the data sets for retrieval results in Hybrid Search (File 2) having the better score in more queries:**
+
+   --- Dataset Comparison ---
+
+   File 1: evaluated_data_dense.json
+   File 2: evaluated_data_hybrid.json
+
+   Precision : 0.3673 vs 0.4286 --> File 2
+   Recall : 0.2653 vs 0.2653 --> Tie
+   F1_Score : 0.2449 vs 0.2653 --> File 2
+   Cosine Similarity : 0.8365 vs 0.8604 --> File 2
+   Answer Relevancy : 0.6478 vs 0.6299 --> File 1
+
+   **_Comparing prompts:_**
+
+   **I evaluated three prompt strategies. The first is the following:**
+
+   - system_prompt = """You are a hardcore fan of the Horizon game series. You have all of the content memorized and can answer all and any questions about the game."""
+
+   - rag_prompt = f"""
+     Question: {llm_query}
+
+     The following is **fictional content from a video game**. Answer the question using only this content:
+     {"\n\n-".join(documents)}
+
+     Answer the question in an informative, concise way using only the information above."""
+
+- Failed due to Azure safety/jailbreaking constraints due to attempting to emulate an AI. You can find the example error message under assets/jailbreak_example.txt:https://github.com/teighanmiller/HorizonZeroDawn_RAG/blob/zoomcamp_demo/assets/chailbreak_example.txt
+
+  **The second prompt was:**
+
+  - system_prompt = """You are a hardcore fan of the Horizon game series. You have all of the content memorized and can answer all and any questions about the game."""
+
+  - rag_prompt = f"""This is the question asked of you: {llm_query}
+
+  These are the pieces of information you have recalled based on the query:
+  {"\n\n-".join(documents)}
+
+  Using only these documents answer the question. The answer to the question should be clear, informative, and only contain relevant information from the information you recalled.
+  Your answer should sound like an answer from the AI GAIA from the video game.
+  """
+
+- Failed due to Azure safety/jailbreaking constraints due to attempting to emulate an AI. You can find the example error message under assets/jailbreak_example.txt:https://github.com/teighanmiller/HorizonZeroDawn_RAG/blob/zoomcamp_demo/assets/chailbreak_example.txt
+
+**The third prompt and the used prompt is:**
+
+- system_prompt = """You are providing information about the Horizon game series. Answer the questions clearly and accurately based only on the provided documents.
+  """
+
+- rag_prompt = f"""
+  Question: {llm_query}
+
+  The following is **fictional content from a video game**. Answer the question using only this content:
+  {"\n\n-".join(documents)}
+
+  Answer the question in an informative, concise way using only the information above.
+  """
+
+- Works well, provides good responses as seen in the evaluated data sets and most importantly doesn't cause Azure to flag for jailbreaking.
+
+5. **Interface**
+
+   - **Streamlit app** provides a simple, interactive Q&A chat interface
+   - Users can type questions and receive fact-grounded answers
+
+6. **Monitoring & Feedback**
+
+   - User queries, responses, and feedback stored in a CSV/DB
+   - Dashboard with 5 charts and two number trackers(Altair + Streamlit) to track system usage, accuracy, and feedback trends
+
+7. **Deployment & Containerization**
+   - Dockerized setup with `docker-compose`
+   - Services:
+     - `streamlit_app`: frontend UI
+     - `qdrant`: vector database
+     - `ingest`: ingest the data from the Horizon Wiki
+     - `ingest_preloaded`: ingest the data from the prescraped CSV file
+   - Easily reproducible on any system with Docker installed
 
 ---
 
-## Architecture & Tech Stack
+## 🛠️ Tech Stack
 
-| Component                                             | Purpose                                             |
-| ----------------------------------------------------- | --------------------------------------------------- |
-| Data collection & preprocessing                       | Scraping, parsing, and cleaning lore/game documents |
-| Embeddings / Vector Store (HuggingFace, Qdrant, BM25) | Hybrid search and retrieval                         |
-| LLM module (OpenAI API and open-source LLMs)          | Response generation                                 |
-| Backend service                                       | Query handling and serving                          |
-| Frontend interface (Streamlit)                        | User interaction                                    |
-
-**Technologies**:
-
-- Python
-- `sentence-transformers`, `openai`, vector DBs (Qdrant)
-- Streamlit
-- Docker / cloud deployment (Will be implemented)
+- **Frontend:** Streamlit
+- **Knowledge Base:** Qdrant (Vector DB)
+- **LLM Integration:** OpenAI API (GPT-4o-mini)
+- **Evaluation:** Python, custom scripts
+- **Monitoring & Visualization:** Pandas, Altair, Streamlit dashboard
+- **Containerization:** Docker & Docker Compose
 
 ---
 
-## Getting Started
+## ⚙️ Setup Instructions
 
-**\*This will not work without adding Azure API credentials for a GPT4o-mini model.**
+### 1. Clone Repository
 
-1. **Clone the repository**
+```bash
+git clone https://github.com/teighanmiller/HorizonZeroDawn_RAG.git
+cd HorizonZeroDawn_RAG
+```
 
-   ```bash
-   git clone https://github.com/teighanmiller/HorizonZeroDawn_RAG.git
-   cd HorizonZeroDawn_RAG
-   ```
+### 2. Prerequisites
 
-2. **Make a .env file**
-   The project uses an `.env` file for configuration. Key variables:
+- Docker >= 24.x
+- Docker Compose >= 2.x
+- Git & Curl
 
-   - AZURE_OPENAI_ENDPOINT_URI
-   - AZURE_OPENAI_API_KEY
-   - AZURE_API_VERSION
+### 3. Environment Variables
 
-3. **Run the Docker Container**
+Create a `.env` file in the root directory:
 
-   - Follow the instructions found in README.Docker.md: https://github.com/teighanmiller/HorizonZeroDawn_RAG/blob/main/README.Docker.md
+- The `.env` file must contain these 3 variables:
+  OPENAI_API_KEY=your_api_key_here
+  AZURE_OPENAI_ENDPOINT_URI=your_endpoint_uri_here
+  AZURE_API_VERSION=your_api_version_here
 
----
+### 4. Start Services
 
-## What I Learned & Skills Gained
+- Follow this instructions in the README.Docker.md file: https://github.com/teighanmiller/HorizonZeroDawn_RAG/blob/zoomcamp_demo/README.Docker.md
 
-- **Information Retrieval** — embeddings, vector search, similarity metrics.
-- **Prompt Engineering & LLM Usage** — guiding models, avoiding hallucinations, context handling.
-- **Data Cleaning / Preparation** — parsing, splitting, and normalizing unstructured text.
-- **System Design** — pipeline development: ingestion → indexing → retrieval → generation → serving.
-- **Backend Development** — API endpoints, query handling, error management.
-- **Iteration & Testing** — refining retrieval and generation quality with evaluation metrics.
-- **Problem Solving under Ambiguity** — resolving conflicts in lore data and handling incomplete information.
+### 5. Access the App
 
----
-
-## Challenges & Resolutions
-
-- **Challenge**: Retrieval sometimes mis-ranked irrelevant documents.  
-  **Solution**: tested different embeddings, hybrid search.
-
-- **Challenge**: Generated answers risked hallucinations.  
-  **Solution**: Constrained prompts to use retrieved context only and added output filtering.
-
-- **Challenge**: Scaling for speed and efficiency.  
-  **Solution**: Chunked documents, optimized vector store, cached common queries, cached chat instance.
+- Streamlit UI: [http://localhost:8501](http://localhost:8501)
+- Qdrant DB: [http://localhost:6333](http://localhost:6333)
 
 ---
 
-## Future Work
+## 🎯 Evaluation Criteria Mapping
 
-- Add new data sources (developer notes, wikis, interviews).
-- Review user feedback for retrieval improvement.
-- Explore open-source LLM deployment.
-- Implement versioning for updated lore.
-- Deploy using AWS.
+- **Problem Description (2/2):** Clearly defined problem and motivation
+- **Retrieval Flow (2/2):** KB + LLM used, hybrid retrieval supported
+- **Retrieval Evaluation (2/2):** Dense, sparse, and hybrid evaluated
+- **LLM Evaluation (2/2):** Multiple prompts and approaches tested
+- **Interface (2/2):** Streamlit web UI
+- **Ingestion Pipeline (2/2):** Automated ingestion with Python script
+- **Monitoring (2/2):** User feedback + dashboard with 5+ charts
+- **Containerization (2/2):** Full docker-compose setup
+- **Reproducibility (2/2):** Clear setup, data included, dependency versions specified
 
 ---
+
+## 📊 Monitoring Dashboard
+
+Example dashboard includes:
+
+- Query volume over time
+- Retrieval hit-rate
+- User satisfaction score
+- Average response length
+- Failure rate / fallback LLM usage
+
+(_See `/dashboard/monitoring.py` for details_)
+
+---
+
+## 🖼️ Screenshots & Demo
+
+- App screenshot:  
+  ![Streamlit Chat Interface](assets/app_screenshot.png)
+
+- Dashboard example:  
+  ![Monitoring Dashboard](assets/dashboard.png)
+
+- Video demo (click to watch):  
+  ![Demo Video](assets/demo.gif)
+
+---
+
+## 🔮 Future Opportunities
+
+- Deploy to AWS/GCP/Azure for cloud access 🌐
+- Extend dataset beyond Horizon Zero Dawn → other games, knowledge bases 🎮
+- Add **user query rewriting** for better retrieval 🔄
+- Experiment with **re-ranking models** for improved accuracy 📈
+
+---
+
+## 📂 Repository Structure
+
+```
+├── data/         # Dataset
+├── src/          # Contains python files for ingestion, RAG, UI and the Dashboard
+├── docker-compose.yml
+├── Dockerfile
+├── README.Docker.md
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## 👤 Author
+
+**Teighan Miller**  
+Second-Year Mechatronics Engineering, University of Waterloo  
+Focus: AI, Machine Learning, and Software Development
