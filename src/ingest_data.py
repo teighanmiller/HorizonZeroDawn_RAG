@@ -8,7 +8,7 @@ from src.scraper import scrape_data
 
 DENSE_DIM = 768
 BATCH_SIZE = 50
-COLLECTION_NAME = "HORIZON_RAG"
+COLLECTION_NAME = "horizon_rag"
 PRELOADED_FILE_PATH = "data/horizon_data_2025-08-18_08-42-57.csv"
 
 
@@ -28,7 +28,8 @@ def get_id(row: pd.Series) -> str:
 def featurize_data(
     df: pd.DataFrame, embedding_model: SentenceTransformer
 ) -> pd.DataFrame:
-    df["nomic_vector"] = df["content"].apply(
+    tqdm.pandas()
+    df["nomic_vector"] = df["content"].progress_apply(
         lambda x: embedding_model.encode(x if isinstance(x, str) else "Empty")
     )
 
@@ -98,20 +99,28 @@ def create_collection(client: QdrantClient, collection_data: pd.DataFrame):
 
 
 def ingest(preloaded: bool = False):
+    print("Loading model....")
     dense_model = SentenceTransformer(
         "nomic-ai/nomic-embed-text-v1.5", trust_remote_code=True
     )
+    print("Finished loading model....")
 
-    qclient = QdrantClient("http://localhost:6333", timeout=60)
+    qclient = QdrantClient("http://qdrant:6333", timeout=60)
 
     if not preloaded:
+        print("Scraping data....")
         raw_data_path = scrape_data()
     else:
+        print("Using preloaded data....")
         raw_data_path = PRELOADED_FILE_PATH
 
+    print("Reading data....")
     raw_data = pd.read_csv(raw_data_path)
+    print("Featurizing data....")
     embedded_data = featurize_data(raw_data, dense_model)
+    print("Creating collection....")
     create_collection(client=qclient, collection_data=embedded_data)
+    print("Finished creating collection.")
 
 
 if __name__ == "__main__":
