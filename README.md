@@ -90,16 +90,10 @@ This blends information retrieval + natural language generation — useful for c
 
 3. **Prepare knowledge data**
 
-   - Place lore / documents into `data/`
-   - (Optional) Run preprocessing script. You can download the preloaded data set from this repo as well.
+   - Run ingest_data.py using python -m src.ingest_data -p to ingest data using the prescraped data in the data folder. This will create a collection with the vectorized and processed data.
+   - (Optional) Run scraping script using python -m src.ingest_data . This will scrape raw data from Horizon Wikis
 
-4. **Index the documents**
-
-   ```bash
-   python index_documents.py
-   ```
-
-5. **Run the app**
+4. **Run the app**
    ```bash
    streamlit run src/app.py
    ```
@@ -121,7 +115,7 @@ This blends information retrieval + natural language generation — useful for c
 ## Challenges & Resolutions
 
 - **Challenge**: Retrieval sometimes mis-ranked irrelevant documents.  
-  **Solution**: Tuned thresholds, tested different embeddings, hybrid search.
+  **Solution**: tested different embeddings, hybrid search.
 
 - **Challenge**: Generated answers risked hallucinations.  
   **Solution**: Constrained prompts to use retrieved context only and added output filtering.
@@ -134,7 +128,7 @@ This blends information retrieval + natural language generation — useful for c
 ## Future Work
 
 - Add new data sources (developer notes, wikis, interviews).
-- Collect user feedback for retrieval improvement.
+- Review user feedback for retrieval improvement.
 - Explore open-source LLM deployment.
 - Implement versioning for updated lore.
 - Implement docker.
