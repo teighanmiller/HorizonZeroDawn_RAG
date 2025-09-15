@@ -149,8 +149,37 @@ with col[1]:
 
     st.altair_chart(chart, use_container_width=True)
 
+    # Create a chart for average response time
+    st.markdown("#### Average Response Time Trend")
+
+    df_reshaped["timestamp"] = pd.to_datetime(df_reshaped["timestamp"])
+
+    # Group by date and compute average
+    avg_response_time = (
+        df_reshaped.groupby(df_reshaped["timestamp"].dt.date)["full_response_time"]
+        .mean()
+        .reset_index()
+        .rename(
+            columns={"timestamp": "Date", "full_response_time": "Avg Response Time"}
+        )
+    )
+
+    # Create line chart
+    line_chart = (
+        alt.Chart(avg_response_time)
+        .mark_line(point=True)
+        .encode(
+            x="Date:T",
+            y="Avg Response Time:Q",
+            tooltip=["Date:T", "Avg Response Time:Q"],
+        )
+        .properties(height=300)
+    )
+
+    st.altair_chart(line_chart, use_container_width=True)
+
     # Create a graph for token usage by query.
-    st.subheader("Token by Query Breakdown")
+    st.subheader("Tokens by Query Breakdown")
 
     df_tokens = pd.DataFrame(
         {
@@ -174,30 +203,29 @@ with col[1]:
 
     st.altair_chart(chart, use_container_width=True)
 
+
 with col[2]:
-    # Create a table that shows the number of queries for each classification.
+    # Group classifications
     classifications = (
         df_reshaped.groupby("query_classification")
         .size()
         .reset_index(name="Query Count")
-        .rename(columns={"query_classification": "classification"})
+        .rename(columns={"query_classification": "Classification"})
     )
+
     st.markdown("#### Top Classifications")
 
-    st.dataframe(
-        classifications,
-        column_order=("classification", "Query Count"),
-        hide_index=True,
-        width=None,
-        column_config={
-            "classification": st.column_config.TextColumn(
-                "Classification",
+    # Create a pie chart
+    pie_chart = (
+        alt.Chart(classifications)
+        .mark_arc()
+        .encode(
+            theta=alt.Theta("Query Count:Q", title="Count"),
+            color=alt.Color(
+                "Classification:N", legend=alt.Legend(title="Classification")
             ),
-            "Query Count": st.column_config.ProgressColumn(
-                "Count",
-                format="%f",
-                min_value=0,
-                max_value=int(classifications["Query Count"].max()),
-            ),
-        },
+            tooltip=["Classification", "Query Count"],
+        )
     )
+
+    st.altair_chart(pie_chart, use_container_width=True)
