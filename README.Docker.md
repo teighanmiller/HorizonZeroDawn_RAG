@@ -74,3 +74,25 @@ docker compose up app
 ### 6. Use the app.
 
 - Ask a question like "Who is Aloy?" or "Describe the weaknesses of a Thunderjaw."
+
+## Stoping containers and cleaning
+
+- To stop containers run:
+
+```bash
+docker compose down
+```
+
+- To clean container if you see warnings you can run commands with --remove-orphans, as shown in the following example:
+
+```bash
+docker compose up --remove-orphans
+```
+
+---
+
+## References
+
+- [Qdrant Documentation](https://qdrant.tech/documentation/)
+- [Streamlit Documentation](https://docs.streamlit.io/)
+- [Hugging Face Transformers](https://huggingface.co/docs/transformers/index)
