@@ -4,7 +4,6 @@ Scrapes Horizon Zero Dawn Fan Wiki pages for data.
 
 import csv
 import time
-import logging
 from random import random
 from typing import Tuple
 from datetime import datetime
@@ -22,14 +21,6 @@ HEADERS = {
     "Chrome/118.0.0.0 Safari/537.36",
     "Referer": "https://horizon.fandom.com/wiki/Special:AllPages",
 }
-
-logging.basicConfig(
-    filename="logs/scraper_log.log",
-    encoding="utf-8",
-    filemode="a",
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M",
-)
 
 
 def classify_page(title: str, text: str) -> str:
@@ -66,18 +57,6 @@ def classify_page(title: str, text: str) -> str:
             },
         ],
     )
-    if not response["message"]["content"].strip() in [
-        "machine",
-        "society",
-        "location",
-        "object",
-        "character",
-        "other",
-    ]:
-        logging.error(
-            "The classification for %s does not fit into any of the set categories.",
-            title,
-        )
     return response["message"]["content"].strip()
 
 
@@ -175,7 +154,6 @@ def get_html(
     """
     html = safe_get(url)
     if not html or html == "None":
-        logging.error("Failed to fetch index page: %s", url)
         return BeautifulSoup("", "html.parser"), None
 
     soup = BeautifulSoup(html, "html.parser")
@@ -214,7 +192,6 @@ def get_pages(writer: csv.writer, soup: BeautifulSoup):
         classification = classify_page(page_url, content[0])
 
         if not content:
-            logging.debug("No content was extracted from this page: %s", page_url)
             content = [""]
 
         if len(content[0].split()) > 500:
@@ -258,11 +235,9 @@ def safe_get(url: str, retries: int = 3, backoff: float = 2.0) -> str:
             response.raise_for_status()  # Raises HTTPError for bad responses
             return response.text
         except requests.exceptions.RequestException as e:
-            logging.error("Attempt %s/%s failed for %s: %s", attempt, retries, url, e)
             if attempt < retries:
                 time.sleep(backoff * attempt)  # Exponential backoff
             else:
-                logging.error("Giving up on %s", url)
                 return "None"
 
 
@@ -299,7 +274,6 @@ def scrape_data() -> str:
             if not next_page:
                 break
             next_url = urljoin(BASE_URL, next_page.get("href", ""))
-            logging.debug("Following next index page: %s", next_url)
             main_soup, next_page = get_html(next_url)
     print("Finished data ingestion.")
     return csv_path
