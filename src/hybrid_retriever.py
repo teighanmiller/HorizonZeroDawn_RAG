@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 
 class HybridRetriever:
     def __init__(self, collection_name: str, dense_model: SentenceTransformer):
-        self.qclient = QdrantClient("http://localhost:6333", timeout=60)
+        self.qclient = QdrantClient("http://qdrant:6333", timeout=60)
         self.collection_name = collection_name
         self.dense_model = dense_model
 
