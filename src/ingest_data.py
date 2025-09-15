@@ -1,4 +1,5 @@
 import uuid
+import argparse
 import pandas as pd
 from qdrant_client import QdrantClient, models
 from sentence_transformers import SentenceTransformer
@@ -110,3 +111,14 @@ def ingest(preloaded: bool = False):
     raw_data = pd.read_csv(raw_data_path)
     embedded_data = featurize_data(raw_data, dense_model)
     create_collection(client=qclient, collection_data=embedded_data)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        "HorizonZeroDawnRAGIngest",
+        description="Ingests scraped data into a Qdrant collection.",
+    )
+    parser.add_argument("preloaded", "-p", action="store_true")
+    args = parser.parse_args()
+
+    ingest(args.preloaded)
